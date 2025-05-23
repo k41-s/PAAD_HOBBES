@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@{
+    ViewData["Title"] = "Get Random Pokémon";
+    var pokemons = Model as List<PokeApiNet.Pokemon>;
+}
+
+<h1>Get Starter Pokémon</h1>
+<form method="post" asp-controller="Pokemon" asp-action="GetRandomPokemons">
+    <button type="submit">Get Starter Pokémon</button>
+</form>
+
+@if (pokemons != null)
+{
+    <h2>Your Random Pokémon</h2>
+    <div style="display: flex; flex-wrap: wrap;">
+        @foreach (var pokemon in pokemons)
+        {
+            <div style="margin: 10px; text-align: center;">
+                <h3>@pokemon.Name</h3>
+                <img src="@pokemon.Sprites.FrontDefault" alt="@pokemon.Name" width="100" height="100" />
+            </div>
+        }
+    </div>
+}

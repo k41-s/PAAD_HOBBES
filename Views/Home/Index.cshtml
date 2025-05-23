@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+@{
+    ViewData["Title"] = "Get Random Pokemon";
+    var pokemons = Model as List<PokeApiNet.Pokemon>;
+}
+<h1>Get Your Starter Pokemon</h1>
+<form method="post" asp-controller="Pokemon" asp-action="GetRandomPokemons">
+    <button type="submit">Get Pokemon</button>
+</form>
+
+@if (pokemons != null)
+{
+    <h2>Your Starter Pokemon</h2>
+    <div>
+        @foreach (var pokemon in pokemons)
+        {
+            <h3>
+                @pokemon.Name
+            </h3>
+            <img src="@pokemon.Sprites.FrontDefault" alt="@pokemon.Name" width="100" height="100" />
+        }
+    </div>
+}
