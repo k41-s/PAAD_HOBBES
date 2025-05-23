@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\PROJECTS\\School projects\\Pokemon Trading\\Pokemon Generator\\PokemonGenerator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E05A9839-5115-473C-BB37-83D74427F419}|PokemonGenerator\\PokemonGenerator.csproj|c:\\users\\pc\\desktop\\projects\\school projects\\pokemon trading\\pokemon generator\\pokemongenerator\\pokemongenerator\\controllers\\pokemoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E05A9839-5115-473C-BB37-83D74427F419}|PokemonGenerator\\PokemonGenerator.csproj|solutionrelative:pokemongenerator\\controllers\\pokemoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E05A9839-5115-473C-BB37-83D74427F419}|PokemonGenerator\\PokemonGenerator.csproj|c:\\users\\pc\\desktop\\projects\\school projects\\pokemon trading\\pokemon generator\\pokemongenerator\\pokemongenerator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E05A9839-5115-473C-BB37-83D74427F419}|PokemonGenerator\\PokemonGenerator.csproj|solutionrelative:pokemongenerator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E05A9839-5115-473C-BB37-83D74427F419}|PokemonGenerator\\PokemonGenerator.csproj|c:\\users\\pc\\desktop\\projects\\school projects\\pokemon trading\\pokemon generator\\pokemongenerator\\pokemongenerator\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E05A9839-5115-473C-BB37-83D74427F419}|PokemonGenerator\\PokemonGenerator.csproj|solutionrelative:pokemongenerator\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E05A9839-5115-473C-BB37-83D74427F419}|PokemonGenerator\\PokemonGenerator.csproj|c:\\users\\pc\\desktop\\projects\\school projects\\pokemon trading\\pokemon generator\\pokemongenerator\\pokemongenerator\\services\\pokemonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E05A9839-5115-473C-BB37-83D74427F419}|PokemonGenerator\\PokemonGenerator.csproj|solutionrelative:pokemongenerator\\services\\pokemonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E05A9839-5115-473C-BB37-83D74427F419}|PokemonGenerator\\PokemonGenerator.csproj|c:\\users\\pc\\desktop\\projects\\school projects\\pokemon trading\\pokemon generator\\pokemongenerator\\pokemongenerator\\views\\pokemon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E05A9839-5115-473C-BB37-83D74427F419}|PokemonGenerator\\PokemonGenerator.csproj|solutionrelative:pokemongenerator\\views\\pokemon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PROJECTS\\School projects\\Pokemon Trading\\Pokemon Generator\\PokemonGenerator\\PokemonGenerator\\Program.cs",
+              "RelativeDocumentMoniker": "PokemonGenerator\\Program.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PROJECTS\\School projects\\Pokemon Trading\\Pokemon Generator\\PokemonGenerator\\PokemonGenerator\\Program.cs",
+              "RelativeToolTip": "PokemonGenerator\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAkwA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T12:56:24.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PokemonController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PROJECTS\\School projects\\Pokemon Trading\\Pokemon Generator\\PokemonGenerator\\PokemonGenerator\\Controllers\\PokemonController.cs",
+              "RelativeDocumentMoniker": "PokemonGenerator\\Controllers\\PokemonController.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PROJECTS\\School projects\\Pokemon Trading\\Pokemon Generator\\PokemonGenerator\\PokemonGenerator\\Controllers\\PokemonController.cs",
+              "RelativeToolTip": "PokemonGenerator\\Controllers\\PokemonController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwCYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T13:20:43.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PROJECTS\\School projects\\Pokemon Trading\\Pokemon Generator\\PokemonGenerator\\PokemonGenerator\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "PokemonGenerator\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PROJECTS\\School projects\\Pokemon Trading\\Pokemon Generator\\PokemonGenerator\\PokemonGenerator\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "PokemonGenerator\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T12:48:57.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PokemonService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PROJECTS\\School projects\\Pokemon Trading\\Pokemon Generator\\PokemonGenerator\\PokemonGenerator\\Services\\PokemonService.cs",
+              "RelativeDocumentMoniker": "PokemonGenerator\\Services\\PokemonService.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PROJECTS\\School projects\\Pokemon Trading\\Pokemon Generator\\PokemonGenerator\\PokemonGenerator\\Services\\PokemonService.cs",
+              "RelativeToolTip": "PokemonGenerator\\Services\\PokemonService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T13:05:46.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\PROJECTS\\School projects\\Pokemon Trading\\Pokemon Generator\\PokemonGenerator\\PokemonGenerator\\Views\\Pokemon\\Index.cshtml",
+              "RelativeDocumentMoniker": "PokemonGenerator\\Views\\Pokemon\\Index.cshtml",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\PROJECTS\\School projects\\Pokemon Trading\\Pokemon Generator\\PokemonGenerator\\PokemonGenerator\\Views\\Pokemon\\Index.cshtml",
+              "RelativeToolTip": "PokemonGenerator\\Views\\Pokemon\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T13:47:12.036Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
