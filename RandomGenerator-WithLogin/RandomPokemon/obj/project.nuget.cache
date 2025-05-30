@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WqHd4i+O7Bw=",
+  "dgSpecHash": "FWXas1tXTHo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\Random-Pokemon-Generator\\RandomPokemon\\RandomPokemon\\RandomPokemon.csproj",
+  "projectFilePath": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\RandomGenerator-WithLogin\\RandomPokemon\\RandomPokemon.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaish\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\kaish\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
