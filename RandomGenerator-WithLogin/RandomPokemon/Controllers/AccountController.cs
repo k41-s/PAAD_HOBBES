@@ -28,7 +28,7 @@ namespace RandomPokemon.Controllers
             => View();
 
         [HttpPost]
-        public IActionResult Register(AccountViewModel model)
+        public async Task<IActionResult> RegisterAsync(AccountViewModel model)
         {
             if (!ModelState.IsValid)
                 return View(model);
@@ -42,12 +42,25 @@ namespace RandomPokemon.Controllers
 
             User user = new User
             {
-                Username = model.Username,
+                Email = model.Username,
                 PasswordHash = PasswordHelper.HashPassword(model.Password)
             };
 
             _userService.CreateUser(user);
-            return RedirectToAction("Login");
+
+            // Immediately login user
+            IList<Claim> claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.Email)
+            };
+
+            var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var principal = new ClaimsPrincipal(identity);
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+            // Redirect to home
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
@@ -74,7 +87,7 @@ namespace RandomPokemon.Controllers
             // Create identity and principal
             IList<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.Username)
+                new Claim(ClaimTypes.Name, user.Email)
             };
 
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
