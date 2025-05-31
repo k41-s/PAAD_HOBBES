@@ -1,0 +1,224 @@
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\appsettings.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.staticwebassets.runtime.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.staticwebassets.endpoints.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.exe
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.deps.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.runtimeconfig.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.pdb
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.csproj.AssemblyReference.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.AssemblyInfoInputs.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.AssemblyInfo.cs
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.csproj.CoreCompileInputs.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.RazorAssemblyInfo.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.RazorAssemblyInfo.cs
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\scopedcss\bundle\RandomPokemon.styles.css
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\scopedcss\projectbundle\RandomPokemon.bundle.scp.css
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.RandomPokemon.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.RandomPokemon.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.build.RandomPokemon.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RandomPokemon.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RandomPokemon.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPo.5125D120.Up2Date
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\refint\RandomPokemon.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.pdb
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.genruntimeconfig.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\ref\RandomPokemon.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\PokeApiNet.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\PokeApiNet.pdb
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Practise-Rand-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\PokeApiNet.xml
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\appsettings.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.staticwebassets.endpoints.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.staticwebassets.runtime.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.exe
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.deps.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.runtimeconfig.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\RandomPokemon.pdb
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\PokeApiNet.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\PokeApiNet.pdb
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\PokeApiNet.xml
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.csproj.AssemblyReference.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.AssemblyInfoInputs.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.AssemblyInfo.cs
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.csproj.CoreCompileInputs.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.RazorAssemblyInfo.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.RazorAssemblyInfo.cs
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\scopedcss\bundle\RandomPokemon.styles.css
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\scopedcss\projectbundle\RandomPokemon.bundle.scp.css
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.RandomPokemon.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.RandomPokemon.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.build.RandomPokemon.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RandomPokemon.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RandomPokemon.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPo.5125D120.Up2Date
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\refint\RandomPokemon.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.pdb
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\RandomPokemon.genruntimeconfig.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\obj\Debug\net8.0\ref\RandomPokemon.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\DnsClient.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\SharpCompress.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\Snappier.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\Random-Pokemon-Generator\RandomPokemon\RandomPokemon\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\appsettings.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.staticwebassets.endpoints.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.staticwebassets.runtime.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.exe
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.deps.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.runtimeconfig.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.pdb
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\DnsClient.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\SharpCompress.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Snappier.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\PokeApiNet.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\PokeApiNet.pdb
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\PokeApiNet.xml
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.csproj.AssemblyReference.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.AssemblyInfoInputs.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.AssemblyInfo.cs
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.csproj.CoreCompileInputs.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.RazorAssemblyInfo.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.RazorAssemblyInfo.cs
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.sourcelink.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\scopedcss\bundle\RandomPokemon.styles.css
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\scopedcss\projectbundle\RandomPokemon.bundle.scp.css
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.RandomPokemon.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.RandomPokemon.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.build.RandomPokemon.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RandomPokemon.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RandomPokemon.props
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPo.5125D120.Up2Date
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\refint\RandomPokemon.dll
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.pdb
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.genruntimeconfig.cache
+C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\ref\RandomPokemon.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\refint\RandomPokemon.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.pdb
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.csproj.AssemblyReference.cache
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.AssemblyInfoInputs.cache
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.AssemblyInfo.cs
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.csproj.CoreCompileInputs.cache
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.RazorAssemblyInfo.cache
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.RazorAssemblyInfo.cs
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.sourcelink.json
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\appsettings.json
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.staticwebassets.runtime.json
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.staticwebassets.endpoints.json
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.exe
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.deps.json
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.runtimeconfig.json
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\RandomPokemon.pdb
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\DnsClient.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\SharpCompress.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\Snappier.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\PokeApiNet.dll
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\PokeApiNet.pdb
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\bin\Debug\net8.0\PokeApiNet.xml
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\scopedcss\bundle\RandomPokemon.styles.css
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\scopedcss\projectbundle\RandomPokemon.bundle.scp.css
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.RandomPokemon.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.RandomPokemon.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.build.RandomPokemon.props
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RandomPokemon.props
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RandomPokemon.props
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPo.5125D120.Up2Date
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\RandomPokemon.genruntimeconfig.cache
+C:\Users\Nino\Documents\GitHub\PAAD_HOBBES\RandomGenerator-WithLogin\RandomPokemon\obj\Debug\net8.0\ref\RandomPokemon.dll
