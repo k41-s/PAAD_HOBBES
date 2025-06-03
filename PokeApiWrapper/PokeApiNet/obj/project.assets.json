@@ -5188,11 +5188,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\Practise-Rand-Generator\\RandomPokemon\\PokeApiWrapperTest\\PokeApiNet\\PokeApiNet.csproj",
+      "projectUniqueName": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\PokeApiWrapper\\PokeApiNet\\PokeApiNet.csproj",
       "projectName": "PokeApiNet",
-      "projectPath": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\Practise-Rand-Generator\\RandomPokemon\\PokeApiWrapperTest\\PokeApiNet\\PokeApiNet.csproj",
+      "projectPath": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\PokeApiWrapper\\PokeApiNet\\PokeApiNet.csproj",
       "packagesPath": "C:\\Users\\kaish\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\Practise-Rand-Generator\\RandomPokemon\\PokeApiWrapperTest\\PokeApiNet\\obj\\",
+      "outputPath": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\PokeApiWrapper\\PokeApiNet\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
