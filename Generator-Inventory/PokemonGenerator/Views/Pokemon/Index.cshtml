@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Get Starter Pokémon";
+}
+
+<h1>Welcome to the Pokémon Trading App</h1>
+
+<!-- Button to generate new Pokémon -->
+<form method="post" asp-controller="Pokemon" asp-action="GetRandomPokemons" style="display:inline-block; margin-right: 10px;">
+    <button type="submit">Get Starter Pokémon</button>
+</form>
+
+<!-- Button to view inventory -->
+<form method="get" asp-controller="Pokemon" asp-action="ViewStored" style="display:inline-block;">
+    <button type="submit">View Stored Pokémon</button>
+</form>

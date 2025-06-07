@@ -1,0 +1,115 @@
+﻿@model List<PokemonGenerator.Models.OwnedPokemon>
+
+@{
+    ViewData["Title"] = "Your Stored Pokémon";
+}
+
+<h2>Your Stored Pokémon</h2>
+
+<div style="display: flex; flex-wrap: wrap;">
+    @foreach (var pokemon in Model)
+    {
+        <div class="pokemon-card" data-id="@pokemon.Id" style="margin: 10px; text-align: center; border: 1px solid #ccc; padding: 10px; border-radius: 10px; position: relative;">
+            <!-- ⭐ Favorite Toggle Button <div style="margin: 10px; text-align: center; border: 1px solid #ccc; padding: 10px; border-radius: 10px;"> -->
+            <span class="favorite-toggle" data-id="@pokemon.Id" style="position: absolute; top: 5px; right: 5px; font-size: 22px; color: gold; cursor: pointer;">
+                @(pokemon.IsFavorite ? "★" : "☆")
+            </span>
+
+
+
+            <h3>@pokemon.Name</h3>
+            <img src="@pokemon.SpriteUrl" alt="@pokemon.Name" width="100" height="100" />
+            <button class="delete-btn" data-id="@pokemon.Id" style="margin-top: 5px; background-color: #ff4d4d; color: white; border: none; padding: 5px 10px; border-radius: 5px;">
+                Delete
+            </button>
+
+        </div>
+    }
+</div>
+
+@*Delete all stored Pokemon button*@
+<button id="delete-all-btn" style="margin-top: 20px; background-color: #ff3333; color: white; border: none; padding: 10px 15px; border-radius: 5px;">
+    Delete All Pokémon
+</button>
+
+
+
+
+
+@*----------------------- JAVASCRIPT -----------------------*@
+@section Scripts {
+    <script>
+        // Toggle Favorite
+        document.querySelectorAll('.favorite-toggle').forEach(star => {
+            star.addEventListener('click', async function () {
+                const pokemonId = this.getAttribute('data-id');
+                const starElement = this;
+
+                try {
+                    const response = await fetch(`/Pokemon/ToggleFavorite?id=${pokemonId}`, {
+                        method: 'POST'
+                    });
+
+                    if (response.ok) {
+                        const isFavorite = starElement.textContent.trim() === "★";
+                        starElement.textContent = isFavorite ? "☆" : "★";
+
+                        const card = starElement.closest('.pokemon-card');
+                        const container = card.parentElement;
+
+                        card.remove();
+                        if (!isFavorite) {
+                            container.insertBefore(card, container.firstChild);
+                        } else {
+                            container.appendChild(card);
+                        }
+                    }
+                } catch (error) {
+                    console.error('Favorite error:', error);
+                }
+            });
+        });
+
+        // Delete One
+        document.querySelectorAll('.delete-btn').forEach(btn => {
+            btn.addEventListener('click', async function () {
+                const id = this.getAttribute('data-id');
+                const card = this.closest('.pokemon-card');
+
+                try {
+                    const response = await fetch(`/Pokemon/Delete?id=${id}`, {
+                        method: 'POST'
+                    });
+
+                    if (response.ok) {
+                        card.remove(); // Remove from DOM
+                    } else {
+                        console.error('Failed to delete');
+                    }
+                } catch (error) {
+                    console.error('Delete error:', error);
+                }
+            });
+        });
+
+        // Delete All
+        document.getElementById('delete-all-btn')?.addEventListener('click', async function () {
+            try {
+                const response = await fetch(`/Pokemon/DeleteAll`, {
+                    method: 'POST'
+                });
+
+                if (response.ok) {
+                    document.querySelectorAll('.pokemon-card').forEach(card => card.remove());
+                } else {
+                    console.error('Failed to delete all');
+                }
+            } catch (error) {
+                console.error('Delete all error:', error);
+            }
+        });
+    </script>
+}
+
+
+
