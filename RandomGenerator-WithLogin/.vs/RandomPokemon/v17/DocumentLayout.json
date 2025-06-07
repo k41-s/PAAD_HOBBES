@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\RandomGenerator-WithLogin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E077254F-2FD5-4804-8217-4A833651524D}|RandomPokemon\\RandomPokemon.csproj|c:\\users\\kaish\\algebra\\semester 4\\project approach to applications development\\project\\paad_hobbes\\randomgenerator-withlogin\\randompokemon\\randompokemon.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E077254F-2FD5-4804-8217-4A833651524D}|RandomPokemon\\RandomPokemon.csproj|solutionrelative:randompokemon\\randompokemon.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E077254F-2FD5-4804-8217-4A833651524D}|RandomPokemon\\RandomPokemon.csproj|c:\\users\\kaish\\algebra\\semester 4\\project approach to applications development\\project\\paad_hobbes\\randomgenerator-withlogin\\randompokemon\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E077254F-2FD5-4804-8217-4A833651524D}|RandomPokemon\\RandomPokemon.csproj|solutionrelative:randompokemon\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -55,19 +51,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RandomPokemon",
-              "DocumentMoniker": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\RandomGenerator-WithLogin\\RandomPokemon\\RandomPokemon.csproj",
-              "RelativeDocumentMoniker": "RandomPokemon\\RandomPokemon.csproj",
-              "ToolTip": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\RandomGenerator-WithLogin\\RandomPokemon\\RandomPokemon.csproj",
-              "RelativeToolTip": "RandomPokemon\\RandomPokemon.csproj",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAwwA8AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-03T16:04:11.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\RandomGenerator-WithLogin\\RandomPokemon\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "RandomPokemon\\Views\\Account\\Register.cshtml",
@@ -80,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\RandomGenerator-WithLogin\\RandomPokemon\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "RandomPokemon\\Views\\Account\\Login.cshtml",
@@ -92,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\RandomGenerator-WithLogin\\RandomPokemon\\Models\\User.cs",
               "RelativeDocumentMoniker": "RandomPokemon\\Models\\User.cs",
@@ -104,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AccountViewModel.cs",
               "DocumentMoniker": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\RandomGenerator-WithLogin\\RandomPokemon\\Models\\AccountViewModel.cs",
               "RelativeDocumentMoniker": "RandomPokemon\\Models\\AccountViewModel.cs",
@@ -116,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\RandomGenerator-WithLogin\\RandomPokemon\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "RandomPokemon\\Services\\UserService.cs",
@@ -128,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\RandomGenerator-WithLogin\\RandomPokemon\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "RandomPokemon\\Controllers\\AccountController.cs",
