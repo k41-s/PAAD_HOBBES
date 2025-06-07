@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PokemonGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+def97286d53e3abab42daffed1d4eefa61b9200a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dec2d00202cf0670067c0cbd537d594de415d22b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PokemonGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PokemonGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

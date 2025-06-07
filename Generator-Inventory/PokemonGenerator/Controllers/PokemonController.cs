@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using PokeApiNet;
 using PokemonGenerator.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PokemonGenerator.Controllers
 {
+    [Authorize]
     public class PokemonController : Controller
     {
         private readonly PokemonService _pokemonService;

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using PokemonGenerator.Config;
 using PokemonGenerator.Services;
 
@@ -11,7 +12,31 @@ builder.Services.AddSingleton<PokemonGenerator.Services.PokemonService>();
 builder.Services.Configure<MongoDbSettings>(
     builder.Configuration.GetSection("MongoDbSettings"));
 
+builder.Services.AddSingleton<IUserService, UserService>();
 builder.Services.AddSingleton<StoredPokemonService>();
+
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = ".PokemonGenerator.Session";
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true; // Required for GDPR compliance
+});
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Account/Login"; // redirect path when not authenticated
+        options.LogoutPath = "/Account/Logout";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+        options.SlidingExpiration = true;
+        options.Cookie.IsEssential = true;
+        options.Events.OnRedirectToLogin = context =>
+        {
+            context.Response.Redirect(context.RedirectUri + "&reason=unauthorized");
+            return Task.CompletedTask;
+        };
+    });
 
 var app = builder.Build();
 
@@ -24,6 +49,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseSession();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
