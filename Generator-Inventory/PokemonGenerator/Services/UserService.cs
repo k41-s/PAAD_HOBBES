@@ -36,5 +36,15 @@ namespace PokemonGenerator.Services
             var filter = Builders<User>.Filter.Eq(u => u.Id, user.Id);
             _users.DeleteOne(filter);
         }
+
+        public User GetUserById(string id)
+        {
+            return _users.Find(u => u.Id == id).FirstOrDefault();
+        }
+
+        public List<User> GetAllUsersExceptAsync(string userId)
+        {
+            return _users.Find(u => u.Id != userId).ToList();
+        }
     }
 }

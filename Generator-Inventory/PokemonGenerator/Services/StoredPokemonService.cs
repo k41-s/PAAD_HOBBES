@@ -41,6 +41,15 @@ namespace PokemonGenerator.Services
             return await _pokemonCollection.Find(p => p.UserId== userId).ToListAsync();
         }
 
+        public async Task<OwnedPokemon?> GetByIdAsync(string pokemonId, string userId)
+        {
+            var filter = Builders<OwnedPokemon>.Filter.And(
+                Builders<OwnedPokemon>.Filter.Eq(p => p.Id, pokemonId),
+                Builders<OwnedPokemon>.Filter.Eq(p => p.UserId, userId)
+            );
+
+            return await _pokemonCollection.Find(filter).FirstOrDefaultAsync();
+        }
 
         public async Task DeletePokemonAsync(string id, string userId)
         {
@@ -77,5 +86,41 @@ namespace PokemonGenerator.Services
             }
         }
 
+        public async Task<bool> SwapPokemonAsync(string requesterUserId, string receiverUserId, string requesterPokemonId, string receiverPokemonId)
+        {
+            // Retrieve both Pokemon and verify ownership
+            var requesterFilter = Builders<OwnedPokemon>.Filter.And(
+                Builders<OwnedPokemon>.Filter.Eq(p => p.Id, requesterPokemonId),
+                Builders<OwnedPokemon>.Filter.Eq(p => p.UserId, requesterUserId)
+            );
+
+            var receiverFilter = Builders<OwnedPokemon>.Filter.And(
+                Builders<OwnedPokemon>.Filter.Eq(p => p.Id, receiverPokemonId),
+                Builders<OwnedPokemon>.Filter.Eq(p => p.UserId, receiverUserId)
+            );
+
+            var requesterPokemon = await _pokemonCollection.Find(requesterFilter).FirstOrDefaultAsync();
+            var receiverPokemon = await _pokemonCollection.Find(receiverFilter).FirstOrDefaultAsync();
+
+            if (requesterPokemon == null || receiverPokemon == null)
+            {
+                return false; // One or both Pokémon not found or ownership mismatch
+            }
+
+            // Update their UserId fields
+            var requesterUpdate = Builders<OwnedPokemon>.Update.Set(p => p.UserId, receiverUserId);
+            var receiverUpdate = Builders<OwnedPokemon>.Update.Set(p => p.UserId, requesterUserId);
+
+            var updateRequester = await _pokemonCollection.UpdateOneAsync(
+                Builders<OwnedPokemon>.Filter.Eq(p => p.Id, requesterPokemonId), requesterUpdate
+            );
+
+            var updateReceiver = await _pokemonCollection.UpdateOneAsync(
+               Builders<OwnedPokemon>.Filter.Eq(p => p.Id, receiverPokemonId), receiverUpdate
+            );
+
+            // Return true if both updates successful
+            return updateRequester.ModifiedCount == 1 && updateReceiver.ModifiedCount == 1;
+        }
     }
 }

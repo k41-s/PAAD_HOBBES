@@ -14,6 +14,7 @@ builder.Services.Configure<MongoDbSettings>(
 
 builder.Services.AddSingleton<IUserService, UserService>();
 builder.Services.AddSingleton<StoredPokemonService>();
+builder.Services.AddSingleton<TradeService>();
 
 builder.Services.AddSession(options =>
 {
