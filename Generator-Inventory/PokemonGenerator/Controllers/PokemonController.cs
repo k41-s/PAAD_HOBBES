@@ -14,13 +14,41 @@ namespace PokemonGenerator.Controllers
     {
         private readonly PokemonService _pokemonService;
         private readonly StoredPokemonService _storedPokemonService;
+        private readonly IUserService _userService;
 
-        public PokemonController(PokemonService pokemonService, StoredPokemonService storedPokemonService)
+        private string? _userId;
+        private string? CurrentUserId
+        {
+            get
+            {
+                if(_userId == null)
+                    _userId = GetCurrentUserID();
+
+                return _userId;
+            }
+        }
+
+        public PokemonController(PokemonService pokemonService, StoredPokemonService storedPokemonService, IUserService userService)
         {
             _pokemonService = pokemonService;
             _storedPokemonService = storedPokemonService;
+            _userService = userService;
         }
 
+        private string? GetCurrentUserID()
+        {
+            // On login, user email is stored in ClaimTypes.Name in the claim
+            string? email = User?.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value;
+
+            if (string.IsNullOrEmpty(email))
+            {
+                return null; // No current logged in user saved
+            }
+
+            User user = _userService.GetUser(email);
+
+            return user?.Id; // Either userId or null
+        }
 
         [HttpGet]
         public IActionResult Index()
@@ -41,6 +69,9 @@ namespace PokemonGenerator.Controllers
         [HttpPost]
         public async Task<IActionResult> GetRandomPokemons()
         {
+            if (CurrentUserId == null)
+                return Unauthorized();
+
             var pokemons = await _pokemonService.GetRandomPokemonAsync();
 
             var stored = pokemons.Select(p => new OwnedPokemon
@@ -49,7 +80,7 @@ namespace PokemonGenerator.Controllers
                 SpriteUrl = p.Sprites.FrontDefault
             }).ToList();
 
-            await _storedPokemonService.SavePokemonListAsync(stored);
+            await _storedPokemonService.SavePokemonListAsync(stored, CurrentUserId);
 
             return RedirectToAction("Index");
         }
@@ -59,14 +90,20 @@ namespace PokemonGenerator.Controllers
         [HttpGet]
         public async Task<IActionResult> ViewStored()
         {
-            var pokemons = await _storedPokemonService.GetAllAsync();
+            if (CurrentUserId == null)
+                return Unauthorized();
+
+            var pokemons = await _storedPokemonService.GetAllAsync(CurrentUserId);
             return View("Owned", pokemons);
         }
 
         [HttpPost]
         public async Task<IActionResult> Delete(string id)
         {
-            await _storedPokemonService.DeletePokemonAsync(id);
+            if (CurrentUserId == null)
+                return Unauthorized();
+
+            await _storedPokemonService.DeletePokemonAsync(id, CurrentUserId);
             return RedirectToAction("Index");
         }
 
@@ -75,14 +112,20 @@ namespace PokemonGenerator.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteAll()
         {
-            await _storedPokemonService.DeleteAllAsync();
+            if (CurrentUserId == null)
+                return Unauthorized();
+
+            await _storedPokemonService.DeleteAllAsync(CurrentUserId);
             return RedirectToAction("ViewStored");
         }
 
         [HttpPost]
         public async Task<IActionResult> ToggleFavorite(string id)
         {
-            await _storedPokemonService.ToggleFavoriteAsync(id);
+            if (CurrentUserId == null)
+                return Unauthorized();
+
+            await _storedPokemonService.ToggleFavoriteAsync(id, CurrentUserId);
             return Ok();
         }
 
