@@ -6,29 +6,35 @@
 <h2>@ViewData["Title"]</h2>
 
 <form asp-action="OfferTrade" method="post">
-    <label>Select your Pokémon:</label>
-    <select name="offeredPokemonId" required>
-        @foreach (var pokemon in Model.MyPokemon)
-        {
-            <option value="@pokemon.Id">@pokemon.Name</option>
-        }
-    </select>
+    <section>
+        <label>Select your Pokémon:</label>
+        <select name="offeredPokemonId" required>
+            @foreach (var pokemon in Model.MyPokemon)
+            {
+                <option value="@pokemon.Id">@pokemon.Name</option>
+            }
+        </select>
+    </section>
 
-    <label>Select user to trade with:</label>
-    <select name="receiverUserId" required>
-        @foreach (var user in Model.OtherUsers)
-        {
-            <option value="@user.Id">@user.Email</option>
-        }
-    </select>
+    <section>
+        <label>Select user to trade with:</label>
+        <select name="receiverUserId" required>
+            @foreach (var user in Model.OtherUsers)
+            {
+                <option value="@user.Id">@user.Email</option>
+            }
+        </select>
+    </section>
 
-    <label>Select their Pokémon:</label>
-    <select name="wantedPokemonId" required>
-        @foreach (var pokemon in Model.ReceiverPokemon)
-        {
-            <option value="@pokemon.Id">@pokemon.Name</option>
-        }
-    </select>
+    <section>
+        <label>Select their Pokémon:</label>
+        <select name="wantedPokemonId" required>
+            @foreach (var pokemon in Model.ReceiverPokemon)
+            {
+                <option value="@pokemon.Id">@pokemon.Name</option>
+            }
+        </select>
+    </section>
 
     <button type="submit">Send Trade Request</button>
 </form>

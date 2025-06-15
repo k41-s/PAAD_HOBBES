@@ -39,6 +39,7 @@ namespace PokemonGenerator.Services
 
         public async Task UpdateTradeStatusAsync(string tradeId, StatusType newStatus)
         {
+
             var filter = Builders<TradeModel>.Filter.Eq(t => t.Id, tradeId);
             var update = Builders<TradeModel>.Update.Set(t => t.Status, newStatus);
             await _tradeCollection.UpdateOneAsync(filter, update);

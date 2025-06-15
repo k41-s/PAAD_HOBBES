@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Diagnostics;
 using PokemonGenerator.Models;
 using PokemonGenerator.Services;
+using System.Security.Policy;
+using System.Text;
 
 namespace PokemonGenerator.Controllers
 {
@@ -76,7 +78,6 @@ namespace PokemonGenerator.Controllers
         [HttpPost]
         public async Task<IActionResult> RespondToTrade(string tradeId, bool accept)
         {
-            // After responding to trade, it goes weird. check gpt chat
 
             TradeModel? trade = await _tradeService.GetByIdAsync(tradeId);
             if (trade == null || trade.ReceiverUserId != CurrentUserId)
@@ -167,6 +168,73 @@ namespace PokemonGenerator.Controllers
             {
                 IncomingTrades = incomingViewModels,
                 OutgoingTrades = outgoingViewModels
+            };
+
+            return View(model);
+        }
+
+        // Still behaves weird
+        [HttpGet]
+        public async Task<IActionResult> MyTrades()
+        {
+            if (CurrentUserId == null)
+                return Unauthorized();
+
+
+            IList<TradeModel> trades = await _tradeService.GetTradesForUserAsync(CurrentUserId);
+
+            // Only want to see sent trades
+            IList<TradeModel> sentTrades = trades.Where(t => t.RequesterUserId == CurrentUserId).ToList();
+
+            var acceptedTradesViewModel = new List<TradeInboxViewModel>();
+            var rejectedTradesViewModel = new List<TradeInboxViewModel>();
+
+            foreach (var trade in sentTrades)
+            {
+                if (trade.Status == StatusType.Pending)
+                    continue;
+
+                var requester = _userService.GetUserById(trade.RequesterUserId);
+                var receiver = _userService.GetUserById(trade.ReceiverUserId);
+
+                var requesterPokemon = await _storedPokemonService.GetByIdAsync(trade.RequesterPokemonId, trade.RequesterUserId);
+                var receiverPokemon = await _storedPokemonService.GetByIdAsync(trade.ReceiverPokemonId, trade.ReceiverUserId);
+
+
+                if (trade.Status == StatusType.Accepted)
+                {
+                    acceptedTradesViewModel.Add(new TradeInboxViewModel
+                    {
+                        TradeId = trade.Id,
+                        RequesterEmail = requester?.Email ?? "(Unknown)",
+                        ReceiverEmail = receiver?.Email ?? "(Unknown)",
+                        RequesterPokemonName = requesterPokemon?.Name ?? "(Missing)",
+                        RequesterPokemonSprite = requesterPokemon?.SpriteUrl,
+                        ReceiverPokemonName = receiverPokemon?.Name ?? "(Missing)",
+                        ReceiverPokemonSprite = receiverPokemon?.SpriteUrl,
+                        Status = trade.Status
+                    }); 
+                }
+                else
+                {
+                    rejectedTradesViewModel.Add(new TradeInboxViewModel
+                    {
+                        TradeId = trade.Id,
+                        RequesterEmail = requester?.Email ?? "(Unknown)",
+                        ReceiverEmail = receiver?.Email ?? "(Unknown)",
+                        RequesterPokemonName = requesterPokemon?.Name ?? "(Missing)",
+                        RequesterPokemonSprite = requesterPokemon?.SpriteUrl,
+                        ReceiverPokemonName = receiverPokemon?.Name ?? "(Missing)",
+                        ReceiverPokemonSprite = receiverPokemon?.SpriteUrl,
+                        Status = trade.Status
+                    });
+                }
+            }
+
+            var model = new MyTradesViewModel
+            {
+                AcceptedTrades = acceptedTradesViewModel,
+                RejectedTrades = rejectedTradesViewModel
             };
 
             return View(model);
