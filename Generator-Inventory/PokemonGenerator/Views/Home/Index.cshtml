@@ -1,32 +1,18 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@section Styles {
+    <link rel="stylesheet" href="~/css/home.css" />
+}
+
+<div class="home-main-container">
+    <img src="~/images/pokemon-logo.png" alt="Pokemon" class="poke-logo-main" />
+    <div class="poke-slogan">TRADING<br />SIMULATOR</div>
+    <div class="poke-timer-container">
+        <img src="~/images/pokemon-egg.png" alt="Pokemon Egg" class="poke-egg-img" />
+        <img src="~/images/pokeball-icon.png" alt="Pokeball" class="poke-timer-ball" />
+    </div>
 </div>
 
 
-@{
-    ViewData["Title"] = "Get Random Pokemon";
-    var pokemons = Model as List<PokeApiNet.Pokemon>;
-}
-
-<a href="/Pokemon">
-    <button type="button">Get Started</button>
-</a>
-
-@if (pokemons != null)
-{
-    <h2>Your Starter Pokemon</h2>
-    <div>
-        @foreach (var pokemon in pokemons)
-        {
-            <h3>
-                @pokemon.Name
-            </h3>
-            <img src="@pokemon.Sprites.FrontDefault" alt="@pokemon.Name" width="100" height="100" />
-        }
-    </div>
-}

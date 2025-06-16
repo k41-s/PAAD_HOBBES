@@ -22,3 +22,15 @@ C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\P
 C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\obj\Debug\netstandard2.1\PokeApiNet.sourcelink.json
 C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\obj\Debug\netstandard2.1\PokeApiNet.dll
 C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\obj\Debug\netstandard2.1\PokeApiNet.pdb
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\bin\Debug\netstandard2.1\PokeApiNet.deps.json
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\bin\Debug\netstandard2.1\PokeApiNet.dll
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\bin\Debug\netstandard2.1\PokeApiNet.pdb
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\bin\Debug\netstandard2.1\PokeApiNet.xml
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\obj\Debug\netstandard2.1\PokeApiNet.csproj.AssemblyReference.cache
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\obj\Debug\netstandard2.1\PokeApiNet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\obj\Debug\netstandard2.1\PokeApiNet.AssemblyInfoInputs.cache
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\obj\Debug\netstandard2.1\PokeApiNet.AssemblyInfo.cs
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\obj\Debug\netstandard2.1\PokeApiNet.csproj.CoreCompileInputs.cache
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\obj\Debug\netstandard2.1\PokeApiNet.sourcelink.json
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\obj\Debug\netstandard2.1\PokeApiNet.dll
+C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\obj\Debug\netstandard2.1\PokeApiNet.pdb

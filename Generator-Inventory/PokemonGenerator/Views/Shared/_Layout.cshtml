@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@*
+   
+*@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,39 +10,31 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PokemonGenerator.styles.css" asp-append-version="true" />
+    @RenderSection("Styles", required: false)  <!-- Pour les CSS spécifiques, ex: home.css -->
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PokemonGenerator</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Pokemon" asp-action="Index">Pokemon</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Trade" asp-action="Index">Trades</a>
-                        </li>
-                    </ul>
-
-                    @if (!User.Identity.IsAuthenticated)
-                    {
-                        <a class="btn btn-outline-dark ms-auto" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
-                    }
-                    else
-                    {
-                        <span class="nav-link" style="padding: 3vh;">Logged in as <strong>@User.Identity.Name</strong></span>
-                        <a class="btn btn-outline-dark ms-auto" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
-                    }
-                </div>
+        <nav class="poke-navbar">
+            <div class="poke-navbar-left">
+                <img src="~/images/pokeball-icon.png" class="nav-pokeball" />
+            </div>
+            <div class="poke-navbar-center">
+                <a href="/" class="poke-nav-btn">Home</a>
+                <a href="/Trading" class="poke-nav-btn">Trading</a>
+                <a href="/Inventory" class="poke-nav-btn">Inventory</a>
+                <a href="/Pokemon" class="poke-nav-btn">Pokemon</a>
+            </div>
+            <div class="poke-navbar-right">
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Login">LOGIN</a>
+                    <a class="poke-nav-btn" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                }
+                else
+                {
+                    <span class="nav-link" style="padding: 3vh; color: #222;">Logged in as <strong>@User.Identity.Name</strong></span>
+                    <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
+                }
             </div>
         </nav>
     </header>
@@ -48,19 +43,14 @@
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2025 - PokemonGenerator - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
