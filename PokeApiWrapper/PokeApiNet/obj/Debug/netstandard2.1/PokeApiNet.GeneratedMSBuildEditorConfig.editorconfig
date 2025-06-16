@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = PokeApiNet
-build_property.ProjectDir = C:\Users\coren\Documents\PAAD\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\
+build_property.ProjectDir = C:\Users\kaish\Algebra\Semester 4\Project Approach to Applications Development\Project\PAAD_HOBBES\PokeApiWrapper\PokeApiNet\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

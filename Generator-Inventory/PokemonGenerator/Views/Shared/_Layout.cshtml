@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PokemonGenerator.styles.css" asp-append-version="true" />
-    @RenderSection("Styles", required: false)  <!-- Pour les CSS spécifiques, ex: home.css -->
+    @RenderSection("Styles", required: false)
 </head>
 <body>
     <header>
@@ -19,20 +19,20 @@
                 <img src="~/images/pokeball-icon.png" class="nav-pokeball" />
             </div>
             <div class="poke-navbar-center">
-                <a href="/" class="poke-nav-btn">Home</a>
-                <a href="/Trading" class="poke-nav-btn">Trading</a>
-                <a href="/Inventory" class="poke-nav-btn">Inventory</a>
+                <a class="poke-nav-btn" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="poke-nav-btn" asp-area="" asp-controller="Trade" asp-action="Index">Trading</a>
+                <a class="poke-nav-btn" asp-area="" asp-controller="Pokemon" asp-action="Index">Inventory</a>
                 <a href="/Pokemon" class="poke-nav-btn">Pokemon</a>
             </div>
             <div class="poke-navbar-right">
                 @if (!User.Identity.IsAuthenticated)
                 {
-                    <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Login">LOGIN</a>
+                    <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
                     <a class="poke-nav-btn" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
                 }
                 else
                 {
-                    <span class="nav-link" style="padding: 3vh; color: #222;">Logged in as <strong>@User.Identity.Name</strong></span>
+                    <span class="nav-link" style="padding: 3vh; color: white;">Logged in as <strong>@User.Identity.Name</strong></span>
                     <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
                 }
             </div>
