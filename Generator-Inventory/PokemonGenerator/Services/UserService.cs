@@ -22,7 +22,7 @@ namespace PokemonGenerator.Services
 
         public User GetUser(string email)
         {
-            return _users.Find(u => u.Email == email).FirstOrDefault();
+            return _users.Find(u => u.Username == email).FirstOrDefault();
         }
 
         public void UpdateUser(User user)

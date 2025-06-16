@@ -14,7 +14,7 @@
             {
                 string? selectedAttr = user.Id == Model.SelectedReceiverUserId ? "selected" : "";
                 <option value="@user.Id" selected="@selectedAttr">
-                    @user.Email
+                    @user.Username
                 </option>
             }
         </select>

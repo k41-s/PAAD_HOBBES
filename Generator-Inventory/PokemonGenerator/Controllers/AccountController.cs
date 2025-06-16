@@ -42,7 +42,7 @@ namespace PokemonGenerator.Controllers
 
             User user = new User
             {
-                Email = model.Username,
+                Username = model.Username,
                 PasswordHash = PasswordHelper.HashPassword(model.Password)
             };
 
@@ -51,7 +51,7 @@ namespace PokemonGenerator.Controllers
             // Immediately login user
             IList<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.Email)
+                new Claim(ClaimTypes.Name, user.Username)
             };
 
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -87,7 +87,7 @@ namespace PokemonGenerator.Controllers
             // Create identity and principal
             IList<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.Email)
+                new Claim(ClaimTypes.Name, user.Username)
             };
 
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

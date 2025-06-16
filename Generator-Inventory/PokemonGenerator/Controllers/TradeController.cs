@@ -136,8 +136,8 @@ namespace PokemonGenerator.Controllers
                 incomingViewModels.Add(new TradeInboxViewModel
                 {
                     TradeId = trade.Id,
-                    RequesterEmail = requester?.Email ?? "(Unknown)",
-                    ReceiverEmail = receiver?.Email ?? "(Unknown)",
+                    RequesterEmail = requester?.Username ?? "(Unknown)",
+                    ReceiverEmail = receiver?.Username ?? "(Unknown)",
                     RequesterPokemonName = requesterPokemon?.Name ?? "(Missing)",
                     RequesterPokemonSprite = requesterPokemon?.SpriteUrl,
                     ReceiverPokemonName = receiverPokemon?.Name ?? "(Missing)",
@@ -157,8 +157,8 @@ namespace PokemonGenerator.Controllers
                 outgoingViewModels.Add(new TradeInboxViewModel
                 {
                     TradeId = trade.Id,
-                    RequesterEmail = requester?.Email ?? "(Unknown)",
-                    ReceiverEmail = receiver?.Email ?? "(Unknown)",
+                    RequesterEmail = requester?.Username ?? "(Unknown)",
+                    ReceiverEmail = receiver?.Username ?? "(Unknown)",
                     RequesterPokemonName = requesterPokemon?.Name ?? "(Missing)",
                     RequesterPokemonSprite = requesterPokemon?.SpriteUrl,
                     ReceiverPokemonName = receiverPokemon?.Name ?? "(Missing)",
@@ -212,8 +212,8 @@ namespace PokemonGenerator.Controllers
                     acceptedTradesViewModel.Add(new TradeInboxViewModel
                     {
                         TradeId = trade.Id,
-                        RequesterEmail = receiver?.Email ?? "(Unknown)",
-                        ReceiverEmail = requester?.Email ?? "(Unknown)",
+                        RequesterEmail = receiver?.Username ?? "(Unknown)",
+                        ReceiverEmail = requester?.Username ?? "(Unknown)",
                         RequesterPokemonName = requesterPokemon?.Name ?? "(Missing)",
                         RequesterPokemonSprite = requesterPokemon?.SpriteUrl,
                         ReceiverPokemonName = receiverPokemon?.Name ?? "(Missing)",
@@ -226,8 +226,8 @@ namespace PokemonGenerator.Controllers
                     rejectedTradesViewModel.Add(new TradeInboxViewModel
                     {
                         TradeId = trade.Id,
-                        RequesterEmail = requester?.Email ?? "(Unknown)",
-                        ReceiverEmail = receiver?.Email ?? "(Unknown)",
+                        RequesterEmail = requester?.Username ?? "(Unknown)",
+                        ReceiverEmail = receiver?.Username ?? "(Unknown)",
                         RequesterPokemonName = requesterPokemon?.Name ?? "(Missing)",
                         RequesterPokemonSprite = requesterPokemon?.SpriteUrl,
                         ReceiverPokemonName = receiverPokemon?.Name ?? "(Missing)",
