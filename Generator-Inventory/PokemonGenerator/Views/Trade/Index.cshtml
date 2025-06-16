@@ -14,7 +14,7 @@
         @if(trade.Status == StatusType.Pending)
         {
             <div>
-                <p>From: @trade.RequesterEmail</p>
+                <p><strong>From: @trade.RequesterEmail</strong></p>
                 <p>Offering: @trade.RequesterPokemonName</p>
                 <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" />
                 <p>Wants: @trade.ReceiverPokemonName</p>
@@ -52,7 +52,7 @@ else
         @if(trade.Status == StatusType.Pending)
         {
             <div>
-                <p>To: @trade.ReceiverEmail</p>
+                <p><strong>To: @trade.ReceiverEmail</strong></p>
                 <p>Offering: @trade.RequesterPokemonName</p>
                 <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" />
                 <p>Wants: @trade.ReceiverPokemonName</p>

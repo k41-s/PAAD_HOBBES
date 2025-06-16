@@ -27,7 +27,7 @@ namespace PokemonGenerator.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> CreateTrade()
+        public async Task<IActionResult> CreateTrade(string? receiverUserId)
         {
             if (CurrentUserId == null)
                 return Unauthorized();
@@ -35,22 +35,25 @@ namespace PokemonGenerator.Controllers
             // Prepare the CreateTradeViewModel:
             var myPokemon = await _storedPokemonService.GetAllAsync(CurrentUserId);
             var otherUsers = _userService.GetAllUsersExceptAsync(CurrentUserId);
-            var firstOtherUserId = otherUsers.FirstOrDefault()?.Id;
-            var receiverPokemon = firstOtherUserId != null
-                ? await _storedPokemonService.GetAllAsync(firstOtherUserId)
+            string? selectedReceiverId = receiverUserId ?? otherUsers.FirstOrDefault()?.Id;
+
+            var receiverPokemon = selectedReceiverId != null
+                ? await _storedPokemonService.GetAllAsync(selectedReceiverId)
                 : new List<OwnedPokemon>();
 
             var model = new CreateTradeViewModel
             {
                 MyPokemon = myPokemon,
                 OtherUsers = otherUsers,
-                ReceiverPokemon = receiverPokemon
+                ReceiverPokemon = receiverPokemon,
+                SelectedReceiverUserId = selectedReceiverId,
+                ShowModal = !string.IsNullOrEmpty(receiverUserId)
             };
 
             return View(model);
         }
 
-            [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> OfferTrade(string offeredPokemonId, string wantedPokemonId, string receiverUserId)
         {
             if (CurrentUserId == null || receiverUserId == CurrentUserId)
@@ -87,7 +90,7 @@ namespace PokemonGenerator.Controllers
             {
                 // Swap ownership of pokemon
                 bool success = await _storedPokemonService.SwapPokemonAsync(
-                    trade.RequesterUserId, 
+                    trade.RequesterUserId,
                     trade.ReceiverUserId, 
                     trade.RequesterPokemonId, 
                     trade.ReceiverPokemonId
@@ -194,20 +197,23 @@ namespace PokemonGenerator.Controllers
                 if (trade.Status == StatusType.Pending)
                     continue;
 
+                bool tradeAccepted = trade.Status == StatusType.Accepted;
+
                 var requester = _userService.GetUserById(trade.RequesterUserId);
                 var receiver = _userService.GetUserById(trade.ReceiverUserId);
 
-                var requesterPokemon = await _storedPokemonService.GetByIdAsync(trade.RequesterPokemonId, trade.RequesterUserId);
-                var receiverPokemon = await _storedPokemonService.GetByIdAsync(trade.ReceiverPokemonId, trade.ReceiverUserId);
+                var requesterPokemon = await _storedPokemonService.GetPokemonAsync(trade.RequesterPokemonId);
+
+                var receiverPokemon = await _storedPokemonService.GetPokemonAsync(trade.ReceiverPokemonId);
 
 
-                if (trade.Status == StatusType.Accepted)
+                if (tradeAccepted)
                 {
                     acceptedTradesViewModel.Add(new TradeInboxViewModel
                     {
                         TradeId = trade.Id,
-                        RequesterEmail = requester?.Email ?? "(Unknown)",
-                        ReceiverEmail = receiver?.Email ?? "(Unknown)",
+                        RequesterEmail = receiver?.Email ?? "(Unknown)",
+                        ReceiverEmail = requester?.Email ?? "(Unknown)",
                         RequesterPokemonName = requesterPokemon?.Name ?? "(Missing)",
                         RequesterPokemonSprite = requesterPokemon?.SpriteUrl,
                         ReceiverPokemonName = receiverPokemon?.Name ?? "(Missing)",

@@ -1,21 +1,24 @@
 ﻿@model PokemonGenerator.Models.MyTradesViewModel
 
+<h1>Your sent trades</h1>
+<h2>-------------------------------</h2>
 
-<h2>Accepted Trades</h2>
+<h2 style="padding: 2px;">Accepted Trades</h2>
+<h3>--------------------------</h3>
 
 @if (Model.AcceptedTrades.Any())
 {
     foreach (var trade in Model.AcceptedTrades)
     {
         <div>
-            <p>From: @trade.RequesterEmail</p>
+            <p><strong>From: @trade.RequesterEmail</strong></p>
             <p>Offered: @trade.RequesterPokemonName</p>
             <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" />
             <p>Requested: @trade.ReceiverPokemonName</p>
             <img src="@trade.ReceiverPokemonSprite" alt="@trade.ReceiverPokemonName" />
             <p>Status: @trade.Status</p>
         </div>
-        
+        <h3>--------------------------</h3>
     }
 }
 else
@@ -23,25 +26,27 @@ else
     <p>No accepted trades.</p>
 }
 
-
-<h2>Rejected Trades</h2>
+<h2>-------------------------------</h2>
+<h2 style="padding: 2px;">Rejected Trades</h2>
+<h3>--------------------------</h3>
 
 @if (Model.RejectedTrades.Any())
 {
     foreach (var trade in Model.RejectedTrades)
     {
         <div>
-            <p>From: @trade.RequesterEmail</p>
+            <p><strong>From: @trade.RequesterEmail</strong></p>
             <p>Offered: @trade.RequesterPokemonName</p>
             <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" />
             <p>Requested: @trade.ReceiverPokemonName</p>
             <img src="@trade.ReceiverPokemonSprite" alt="@trade.ReceiverPokemonName" />
             <p>Status: @trade.Status</p>
         </div>
-        
+        <h3>--------------------------</h3>
     }
 }
 else
 {
     <p>No rejected trades.</p>
 }
+<h2>-------------------------------</h2>

@@ -51,6 +51,13 @@ namespace PokemonGenerator.Services
             return await _pokemonCollection.Find(filter).FirstOrDefaultAsync();
         }
 
+        public async Task<OwnedPokemon?> GetPokemonAsync(string pokemonId)
+        {
+            var filter = Builders<OwnedPokemon>.Filter.Eq(p => p.Id, pokemonId);
+
+            return await _pokemonCollection.Find(filter).FirstOrDefaultAsync();
+        }
+
         public async Task DeletePokemonAsync(string id, string userId)
         {
             var filter = Builders<OwnedPokemon>.Filter.And(
@@ -112,11 +119,13 @@ namespace PokemonGenerator.Services
             var receiverUpdate = Builders<OwnedPokemon>.Update.Set(p => p.UserId, requesterUserId);
 
             var updateRequester = await _pokemonCollection.UpdateOneAsync(
-                Builders<OwnedPokemon>.Filter.Eq(p => p.Id, requesterPokemonId), requesterUpdate
+                Builders<OwnedPokemon>.Filter.Eq(p => p.Id, requesterPokemonId),
+                requesterUpdate
             );
 
             var updateReceiver = await _pokemonCollection.UpdateOneAsync(
-               Builders<OwnedPokemon>.Filter.Eq(p => p.Id, receiverPokemonId), receiverUpdate
+               Builders<OwnedPokemon>.Filter.Eq(p => p.Id, receiverPokemonId),
+               receiverUpdate
             );
 
             // Return true if both updates successful
