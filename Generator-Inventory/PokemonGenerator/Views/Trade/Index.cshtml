@@ -1,0 +1,68 @@
+﻿
+@model PokemonGenerator.Models.TradeInboxListViewModel
+
+<form asp-action="MyTrades" method="get">
+    <button type="submit">View Completed Trades</button>
+</form>
+
+<h2>Incoming Trades</h2>
+
+@if (Model.IncomingTrades.Any())
+{
+    foreach (var trade in Model.IncomingTrades)
+    {
+        @if(trade.Status == StatusType.Pending)
+        {
+            <div>
+                <p><strong>From: @trade.RequesterEmail</strong></p>
+                <p>Offering: @trade.RequesterPokemonName</p>
+                <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" />
+                <p>Wants: @trade.ReceiverPokemonName</p>
+                <img src="@trade.ReceiverPokemonSprite" alt="@trade.ReceiverPokemonName" />
+                <p>Status: @trade.Status</p>
+
+                @if (trade.Status == StatusType.Pending)
+                {
+                    <form asp-action="RespondToTrade" method="post">
+                        <input type="hidden" name="tradeId" value="@trade.TradeId" />
+                        <button type="submit" name="accept" value="true">Accept</button>
+                        <button type="submit" name="accept" value="false">Reject</button>
+                    </form>
+                }
+            </div>
+        }
+    }
+}
+else
+{
+    <p>No incoming trades.</p>
+}
+
+
+<h2>Outgoing Trades</h2>
+
+<form asp-controller="Trade" asp-action="CreateTrade" method="get">
+    <button type="submit">Propose a Trade</button>
+</form>
+
+@if (Model.OutgoingTrades.Any())
+{
+    foreach (var trade in Model.OutgoingTrades)
+    {
+        @if(trade.Status == StatusType.Pending)
+        {
+            <div>
+                <p><strong>To: @trade.ReceiverEmail</strong></p>
+                <p>Offering: @trade.RequesterPokemonName</p>
+                <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" />
+                <p>Wants: @trade.ReceiverPokemonName</p>
+                <img src="@trade.ReceiverPokemonSprite" alt="@trade.ReceiverPokemonName" />
+                <p>Status: @trade.Status</p>
+            </div>
+        }
+    }
+}
+else
+{
+    <p>No outgoing trades.</p>
+}

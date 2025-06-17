@@ -1,0 +1,73 @@
+﻿@model PokemonGenerator.Models.CreateTradeViewModel
+@{
+    ViewData["Title"] = "Propose a Trade";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Form to select user and reload page -->
+<form asp-action="CreateTrade" method="get">
+    <section>
+        <label>Select user to trade with:</label>
+        <select name="receiverUserId" required class="form-select d-inline w-auto me-2">
+            @foreach (var user in Model.OtherUsers)
+            {
+                string? selectedAttr = user.Id == Model.SelectedReceiverUserId ? "selected" : "";
+                <option value="@user.Id" selected="@selectedAttr">
+                    @user.Username
+                </option>
+            }
+        </select>
+        <button type="submit" class="btn btn-primary">Select</button>
+    </section>
+</form>
+
+<!-- Modal for proposing trade -->
+<div class="modal fade" id="tradeModal" tabindex="-1" aria-labelledby="tradeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="OfferTrade" method="post">
+                <input type="hidden" name="receiverUserId" value="@Model.SelectedReceiverUserId" />
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tradeModalLabel">Propose a Trade</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Your Pokémon:</label>
+                        <select name="offeredPokemonId" class="form-select" required>
+                            @foreach (var pokemon in Model.MyPokemon)
+                            {
+                                <option value="@pokemon.Id">@pokemon.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Their Pokémon:</label>
+                        <select name="wantedPokemonId" class="form-select" required>
+                            @foreach (var pokemon in Model.ReceiverPokemon)
+                            {
+                                <option value="@pokemon.Id">@pokemon.Name</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-success">Send Trade Request</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Show modal if needed -->
+@if (Model.ShowModal)
+{
+    <script>
+        window.onload = () => {
+            const tradeModal = new bootstrap.Modal(document.getElementById('tradeModal'));
+            tradeModal.show();
+        };
+    </script>
+}
