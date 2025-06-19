@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>r4aurcq389</Fingerprint>
-      <Integrity>y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A=</Integrity>
+      <Fingerprint>6apy6rif1d</Fingerprint>
+      <Integrity>gll0DjLWviD5MpI4zKCUNU+FdwgeWL70RRr/cirK7xk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zt3wzq3820</Fingerprint>
-      <Integrity>mUmyYA/CSby7JLP9O9Dsn52M8WKjcxMM3iqtdleoE54=</Integrity>
+      <Fingerprint>36mit6tw0a</Fingerprint>
+      <Integrity>RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\pokeball-icon.png'))</OriginalItemSpec>
