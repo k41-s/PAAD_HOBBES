@@ -2,7 +2,6 @@ wwwroot\css\home.css
 wwwroot\css\register.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\images\pokeball-icon.png
 wwwroot\images\pokemon-egg.png
 wwwroot\images\pokemon-logo.png
 wwwroot\js\site.js

@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("08464ee9-8dad-41e1-a065-64c794b9889d")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PokemonGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2de342c8352faf3e57c1470368dbc96733ffb3ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddbb87f93c41122752302cf73c90bccd0de267ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("PokemonGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PokemonGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
