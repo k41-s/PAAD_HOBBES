@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LBq00esEvlEkV4Wy9RaBGbAORdPS2qb6v3lRdP8pE5E=",
+  "Hash": "K78WSQs3BpzGJG9hqkZy5DvNbuql4OU+ZTBE7oEZV8Q=",
   "Source": "PokemonGenerator",
   "BasePath": "_content/PokemonGenerator",
   "Mode": "Default",
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "r4aurcq389",
-      "Integrity": "y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A=",
+      "Fingerprint": "6apy6rif1d",
+      "Integrity": "gll0DjLWviD5MpI4zKCUNU+FdwgeWL70RRr/cirK7xk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -141,6 +141,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\wwwroot\\images\\pokeball-icon.png",
+      "SourceId": "PokemonGenerator",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\wwwroot\\",
+      "BasePath": "_content/PokemonGenerator",
+      "RelativePath": "images/pokeball-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "36mit6tw0a",
+      "Integrity": "RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\pokeball-icon.png"
     },
     {
       "Identity": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\wwwroot\\images\\pokemon-egg.png",
@@ -1569,6 +1590,51 @@
       ]
     },
     {
+      "Route": "css/site.6apy6rif1d.css",
+      "AssetFile": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1301"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gll0DjLWviD5MpI4zKCUNU+FdwgeWL70RRr/cirK7xk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 19:32:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6apy6rif1d"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gll0DjLWviD5MpI4zKCUNU+FdwgeWL70RRr/cirK7xk="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1579,7 +1645,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1303"
+          "Value": "1301"
         },
         {
           "Name": "Content-Type",
@@ -1587,11 +1653,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A=\""
+          "Value": "\"gll0DjLWviD5MpI4zKCUNU+FdwgeWL70RRr/cirK7xk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:18:46 GMT"
+          "Value": "Thu, 19 Jun 2025 19:32:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1601,52 +1667,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.r4aurcq389.css",
-      "AssetFile": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1303"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:18:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "r4aurcq389"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A="
+          "Value": "sha256-gll0DjLWviD5MpI4zKCUNU+FdwgeWL70RRr/cirK7xk="
         }
       ]
     },
@@ -1729,6 +1750,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/pokeball-icon.36mit6tw0a.png",
+      "AssetFile": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\wwwroot\\images\\pokeball-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "876614"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 18:27:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "36mit6tw0a"
+        },
+        {
+          "Name": "label",
+          "Value": "images/pokeball-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto="
+        }
+      ]
+    },
+    {
+      "Route": "images/pokeball-icon.png",
+      "AssetFile": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\wwwroot\\images\\pokeball-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "876614"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 18:27:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto="
         }
       ]
     },

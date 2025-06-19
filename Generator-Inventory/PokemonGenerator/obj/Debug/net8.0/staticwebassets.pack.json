@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\wwwroot\\images\\pokeball-icon.png",
+      "PackagePath": "staticwebassets\\images\\pokeball-icon.png"
+    },
+    {
       "Id": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\wwwroot\\images\\pokemon-egg.png",
       "PackagePath": "staticwebassets\\images\\pokemon-egg.png"
     },

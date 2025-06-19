@@ -24,17 +24,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sk2n0aheqj"},{"Name":"integrity","Value":"sha256-zGQ4CIXgm5RZv2HL5b0l1\u002BemaBhovO4qCRqpkxj8z5w="},{"Name":"label","Value":"_content/PokemonGenerator/css/register.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1321"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022zGQ4CIXgm5RZv2HL5b0l1\u002BemaBhovO4qCRqpkxj8z5w=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 20:18:46 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PokemonGenerator/css/site.6apy6rif1d.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6apy6rif1d"},{"Name":"integrity","Value":"sha256-gll0DjLWviD5MpI4zKCUNU\u002BFdwgeWL70RRr/cirK7xk="},{"Name":"label","Value":"_content/PokemonGenerator/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1301"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022gll0DjLWviD5MpI4zKCUNU\u002BFdwgeWL70RRr/cirK7xk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 19 Jun 2025 19:32:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/PokemonGenerator/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1303"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 20:18:46 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/PokemonGenerator/css/site.r4aurcq389.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"r4aurcq389"},{"Name":"integrity","Value":"sha256-y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A="},{"Name":"label","Value":"_content/PokemonGenerator/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1303"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 20:18:46 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gll0DjLWviD5MpI4zKCUNU\u002BFdwgeWL70RRr/cirK7xk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1301"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022gll0DjLWviD5MpI4zKCUNU\u002BFdwgeWL70RRr/cirK7xk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 19 Jun 2025 19:32:50 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/PokemonGenerator/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
@@ -47,6 +47,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 17 Jun 2025 20:18:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PokemonGenerator/images/pokeball-icon.36mit6tw0a.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\pokeball-icon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"36mit6tw0a"},{"Name":"integrity","Value":"sha256-RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto="},{"Name":"label","Value":"_content/PokemonGenerator/images/pokeball-icon.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"876614"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto=\u0022"},{"Name":"Last-Modified","Value":"Thu, 19 Jun 2025 18:27:04 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PokemonGenerator/images/pokeball-icon.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\pokeball-icon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"876614"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto=\u0022"},{"Name":"Last-Modified","Value":"Thu, 19 Jun 2025 18:27:04 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/PokemonGenerator/images/pokemon-egg.b3ky16yedm.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\pokemon-egg.png'))</AssetFile>

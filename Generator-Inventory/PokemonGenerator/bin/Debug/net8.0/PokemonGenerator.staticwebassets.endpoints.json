@@ -249,6 +249,51 @@
       ]
     },
     {
+      "Route": "css/site.6apy6rif1d.css",
+      "AssetFile": "css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1301"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gll0DjLWviD5MpI4zKCUNU+FdwgeWL70RRr/cirK7xk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 19:32:50 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6apy6rif1d"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gll0DjLWviD5MpI4zKCUNU+FdwgeWL70RRr/cirK7xk="
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "css/site.css",
       "Selectors": [],
@@ -263,7 +308,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1303"
+          "Value": "1301"
         },
         {
           "Name": "Content-Type",
@@ -271,62 +316,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A=\""
+          "Value": "\"gll0DjLWviD5MpI4zKCUNU+FdwgeWL70RRr/cirK7xk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:18:46 GMT"
+          "Value": "Thu, 19 Jun 2025 19:32:50 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.r4aurcq389.css",
-      "AssetFile": "css/site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1303"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 17 Jun 2025 20:18:46 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "r4aurcq389"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-y5lHMlGqyawhRDLCVCiNCVHKfVbeVEzne/fKbGIsa9A="
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
+          "Value": "sha256-gll0DjLWviD5MpI4zKCUNU+FdwgeWL70RRr/cirK7xk="
         }
       ]
     },
@@ -409,6 +409,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/pokeball-icon.36mit6tw0a.png",
+      "AssetFile": "images/pokeball-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "876614"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 18:27:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "36mit6tw0a"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto="
+        },
+        {
+          "Name": "label",
+          "Value": "images/pokeball-icon.png"
+        }
+      ]
+    },
+    {
+      "Route": "images/pokeball-icon.png",
+      "AssetFile": "images/pokeball-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "876614"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 18:27:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RdoG02AEptOvb0f941zgCxi7zQKFtGDLwwAjWQA7Tto="
         }
       ]
     },
