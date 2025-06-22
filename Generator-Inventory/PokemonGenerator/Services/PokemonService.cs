@@ -28,5 +28,10 @@ namespace PokemonGenerator.Services
 
             return pokemons;
         }
+
+        public async Task<Pokemon> GetPokemonByIdAsync(int id)
+        {
+            return await _pokeClient.GetResourceAsync<Pokemon>(id);
+        }
     }
 }

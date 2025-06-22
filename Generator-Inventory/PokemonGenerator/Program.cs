@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<PokemonGenerator.Services.PokemonService>();
+builder.Services.AddSingleton<PokemonService>();
 
 // This is related to the MongoDb database for the owned Pokemon inventory
 builder.Services.Configure<MongoDbSettings>(

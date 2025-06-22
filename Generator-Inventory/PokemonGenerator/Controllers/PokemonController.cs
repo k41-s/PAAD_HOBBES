@@ -84,7 +84,47 @@ namespace PokemonGenerator.Controllers
 
             return RedirectToAction("Index");
         }
+        
+        [HttpGet]
+        public async Task<IActionResult> GetRandomPokemonsJson()
+        {
+            if (CurrentUserId == null)
+                return Unauthorized();
 
+            var pokemons = await _pokemonService.GetRandomPokemonAsync();
+
+            var stored = pokemons.Select(p => new OwnedPokemon
+            {
+                PokemonId = p.Id,
+                Name = p.Name,
+                SpriteUrl = p.Sprites.FrontDefault
+            }).ToList();
+
+            return Json(stored);
+
+            // Do not save pokemon, just load 6 to choose from
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> StoreSelectedPokemon(int id)
+        {
+            if (CurrentUserId == null)
+                return Unauthorized();
+
+            Pokemon p = await _pokemonService.GetPokemonByIdAsync(id);
+
+            OwnedPokemon pokemon = new OwnedPokemon
+            {
+                PokemonId = p.Id,
+                Name = p.Name,
+                SpriteUrl = p.Sprites.FrontDefault
+            };
+
+            await _storedPokemonService.SavePokemonAsync(pokemon, CurrentUserId);
+
+            return RedirectToAction(nameof(ViewStored));
+        }
 
         /*Testing Database*/
         [HttpGet]

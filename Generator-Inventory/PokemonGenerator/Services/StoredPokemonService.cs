@@ -36,24 +36,32 @@ namespace PokemonGenerator.Services
             await _pokemonCollection.InsertManyAsync(pokemons);
         }
 
+        public async Task SavePokemonAsync(OwnedPokemon pokemon, string userId)
+        {
+            // Set user and Insert to DB
+            pokemon.UserId = userId;
+
+            await _pokemonCollection.InsertOneAsync(pokemon);
+        }
+
         public async Task<List<OwnedPokemon>> GetAllAsync(string userId)
         {
             return await _pokemonCollection.Find(p => p.UserId== userId).ToListAsync();
         }
 
-        public async Task<OwnedPokemon?> GetByIdAsync(string pokemonId, string userId)
+        public async Task<OwnedPokemon?> GetByIdAsync(string id, string userId)
         {
             var filter = Builders<OwnedPokemon>.Filter.And(
-                Builders<OwnedPokemon>.Filter.Eq(p => p.Id, pokemonId),
+                Builders<OwnedPokemon>.Filter.Eq(p => p.Id, id),
                 Builders<OwnedPokemon>.Filter.Eq(p => p.UserId, userId)
             );
 
             return await _pokemonCollection.Find(filter).FirstOrDefaultAsync();
         }
 
-        public async Task<OwnedPokemon?> GetPokemonAsync(string pokemonId)
+        public async Task<OwnedPokemon?> GetPokemonAsync(string id)
         {
-            var filter = Builders<OwnedPokemon>.Filter.Eq(p => p.Id, pokemonId);
+            var filter = Builders<OwnedPokemon>.Filter.Eq(p => p.Id, id);
 
             return await _pokemonCollection.Find(filter).FirstOrDefaultAsync();
         }

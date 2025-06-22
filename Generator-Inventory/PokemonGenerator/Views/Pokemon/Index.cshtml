@@ -2,14 +2,121 @@
     ViewData["Title"] = "Get Starter Pokémon";
 }
 
-<h1>Welcome to the Pokémon Trading App</h1>
 
-<!-- Button to generate new Pokémon -->
-<form method="post" asp-controller="Pokemon" asp-action="GetRandomPokemons" style="display:inline-block; margin-right: 10px;">
-    <button type="submit">Get Starter Pokémon</button>
-</form>
+<!-- include Bootstrap CSS in your layout or here if you don’t already -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoH6449QGtG2YVSc0H1LkD3u0hBMVgFiIbbVYUew+OrCXaR"
+      crossorigin="anonymous" />
 
-<!-- Button to view inventory -->
-<form method="get" asp-controller="Pokemon" asp-action="ViewStored" style="display:inline-block;">
-    <button type="submit">View Stored Pokémon</button>
-</form>
+<div class="container py-5">
+    <h1 class="mb-4">Welcome to the Pokémon Trading App</h1>
+
+    <button id="get-starter-btn"
+            class="btn btn-primary me-2">
+        Get Starter Pokémon
+    </button>
+
+    <button id="view-stored-btn"
+            class="btn btn-secondary">
+        View Stored Pokémon
+    </button>
+</div>
+
+<!-- Modal Markup -->
+<div class="modal fade" id="starterModal" tabindex="-1" aria-labelledby="starterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="starterModalLabel">Your New Pokémon</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div id="starterContainer" class="d-flex flex-wrap justify-content-center">
+                    <!-- JS will inject cards here -->
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Close
+                </button>
+                <button id="viewStoredInModal"
+                        type="button"
+                        class="btn btn-primary">
+                    Go to Inventory
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Bootstrap JS bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qQsiP3IrUcbn5Sphc3sZSAqtVjIheGkSagjW69V+z8e8i6M9xsAN0nNQ+FNrN83E"
+            crossorigin="anonymous">
+    </script>
+
+    <script>
+        // Redirect helper
+        document.getElementById('view-stored-btn')
+                .addEventListener('click', () => {
+
+          window.location.href = '/Pokemon/ViewStored';
+        });
+
+        // Main handler for "Get Starter" click
+        document.getElementById('get-starter-btn')
+                .addEventListener('click', async e => {
+          e.preventDefault();
+
+          try {
+            // hit your action method
+            const resp = await fetch('/Pokemon/GetRandomPokemonsJson', {
+              method: 'GET',
+              headers: { 'Accept': 'application/json' }
+            });
+            if (!resp.ok) throw new Error('Network error');
+
+            const pokemons = await resp.json();
+
+            // Build cards
+            const container = document.getElementById('starterContainer');
+            container.innerHTML = ''; // clear old
+
+            pokemons.forEach(p => {
+              const card = document.createElement('div');
+              card.className = 'card m-2 text-center';
+              card.style.width = '120px';
+              card.innerHTML = `
+                <img src="${p.spriteUrl}"
+                     class="card-img-top"
+                     alt="${p.name}" />
+                <div class="card-body p-1">
+                  <h6 class="card-title mb-0">${p.name}</h6>
+                </div>`;
+              container.append(card);
+            });
+
+            // Show modal
+            const modal = new bootstrap.Modal(document.getElementById('starterModal'));
+            modal.show();
+
+
+            // Wire up modal's "Go to Inventory"
+            document.getElementById('viewStoredInModal')
+                    .onclick = () => window.location.href = '/Pokemon/ViewStored';
+
+          } catch (err) {
+            console.error(err);
+            alert('Failed to fetch starter Pokémon.');
+          }
+        });
+    </script>
+}
