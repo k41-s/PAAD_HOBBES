@@ -97,9 +97,9 @@ namespace PokemonGenerator.Controllers
 
             // Cooldown check
             if (user.LastPokemonSelectedTime.HasValue &&
-                DateTime.UtcNow < user.LastPokemonSelectedTime.Value.AddHours(24))
+                DateTime.UtcNow < user.LastPokemonSelectedTime.Value.AddMinutes(1))
             {
-                TimeSpan remaining = user.LastPokemonSelectedTime.Value.AddHours(24) - DateTime.UtcNow;
+                TimeSpan remaining = user.LastPokemonSelectedTime.Value.AddMinutes(1) - DateTime.UtcNow;
                 return BadRequest(new
                 {
                     error = true,

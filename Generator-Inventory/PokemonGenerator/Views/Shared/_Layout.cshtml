@@ -1,52 +1,136 @@
-﻿<!DOCTYPE html>  
+﻿@using Microsoft.AspNetCore.Identity
+
+<!DOCTYPE html>  
 <html lang="en">  
 <head>  
   <meta charset="utf-8" />  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
   <title>@ViewData["Title"] - PokemonGenerator</title>  
+
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />  
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />  
   <link rel="stylesheet" href="~/PokemonGenerator.styles.css" asp-append-version="true" />  
-  @RenderSection("Styles", required: false)  
+
+  <style>
+    /* Navbar stays default-colored */
+
+    .poke-navbar {
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .poke-navbar-left .nav-pokeball {
+      height: 40px;
+    }
+
+    .poke-navbar-center {
+      display: flex;
+      gap: 20px;
+    }
+
+    .poke-nav-btn {
+      background-color: #007bff; /* Bootstrap Blue */
+      color: black;
+      font-weight: bold;
+      padding: 8px 14px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .poke-nav-btn:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+
+    .poke-login-btn {
+      background-color: #007bff;
+      color: black;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .poke-login-btn:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+
+    .disabled-link {
+      pointer-events: none;
+      background-color: #ccc !important;
+      color: #666 !important;
+      font-weight: normal;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 0.9em;
+    }
+  </style>
+
+    @RenderSection("Styles", required: false)  
 </head>  
+
 <body class="d-flex flex-column min-vh-100">  
   <header>  
-      <nav class="poke-navbar">  
-          <div class="poke-navbar-left">  
-              <img src="~/images/pokeball-icon.png" class="nav-pokeball" />  
-          </div>  
-          <div class="poke-navbar-center">  
-              <a class="poke-nav-btn" asp-area="" asp-controller="Home" asp-action="Index">Home</a>  
-              <a class="poke-nav-btn" asp-area="" asp-controller="Trade" asp-action="Index">Trading</a>  
-              <a class="poke-nav-btn" asp-area="" asp-controller="Pokemon" asp-action="ViewStored">Inventory</a>
-          </div>  
-          <div class="poke-navbar-right">  
-              @if (!User.Identity.IsAuthenticated)  
-              {  
-                  <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Login">Login</a>  
-                  <a class="poke-nav-btn" asp-area="" asp-controller="Account" asp-action="Register">Register</a>  
-              }  
-              else  
-              {  
-                  <span class="nav-link" style="padding: 3vh; color: white;">Logged in as <strong>@User.Identity.Name</strong></span>  
-                  <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>  
-              }  
-          </div>  
-      </nav>  
-  </header>  
-  <div class="container flex-grow-1">  
-      <main role="main" class="pb-3">  
-          @RenderBody()  
-      </main>  
-  </div>  
-  <footer class="border-top text-muted mt-auto fixed-bottom">  
-      <div class="container">  
-          &copy; 2025 - PokemonGenerator - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>  
+    <nav class="poke-navbar">  
+      <div class="poke-navbar-left">  
+        <img src="~/images/pokeball-icon.png" class="nav-pokeball" alt="Pokéball" />  
       </div>  
-  </footer>  
+
+      <div class="poke-navbar-center">  
+        <a class="poke-nav-btn" asp-area="" asp-controller="Home" asp-action="Index">Home</a>  
+
+                @if (User.Identity?.IsAuthenticated ?? false)
+                {
+                <a class="poke-nav-btn" asp-area="" asp-controller="Trade" asp-action="Index">Trading</a>
+                <a class="poke-nav-btn" asp-area="" asp-controller="Pokemon" asp-action="ViewStored">Inventory</a>
+                }
+                else
+                {
+                <span class="poke-nav-btn disabled-link">Trading</span>
+                <span class="poke-nav-btn disabled-link">Inventory</span>
+                }
+      </div>  
+
+      <div class="poke-navbar-right">  
+                @if (!User.Identity.IsAuthenticated)
+                {  
+                <a class="poke-login-btn me-2" asp-area="" asp-controller="Account" asp-action="Login">Login</a>  
+                <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Register">Register</a>  
+                }
+                else
+                {  
+                <span class="nav-link text-dark me-2" style="padding: 1vh;">Logged in as <strong>@User.Identity.Name</strong></span>  
+                <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>  
+                }  
+      </div>  
+    </nav>  
+  </header>  
+
+  <div class="container mt-4 flex-grow-1">  
+    <main role="main" class="pb-3">  
+            @RenderBody()  
+    </main>  
+  </div>  
+
+  <footer class="border-top text-muted mt-auto">
+    <div class="container">
+      &copy; 2025 - PokemonGenerator - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+  </footer>
+
   <script src="~/lib/jquery/dist/jquery.min.js"></script>  
   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>  
   <script src="~/js/site.js" asp-append-version="true"></script>  
-  @await RenderSectionAsync("Scripts", required: false)  
+    @await RenderSectionAsync("Scripts", required: false)  
 </body>  
 </html>

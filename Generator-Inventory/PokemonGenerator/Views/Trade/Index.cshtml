@@ -1,68 +1,91 @@
-﻿
-@model PokemonGenerator.Models.TradeInboxListViewModel
+﻿@model PokemonGenerator.Models.TradeInboxListViewModel
 
-<form asp-action="MyTrades" method="get">
-    <button type="submit">View Completed Trades</button>
-</form>
+@{
+    ViewData["Title"] = "Trade Inbox";
+}
 
-<h2>Incoming Trades</h2>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Incoming Trades</h2>
+        <form asp-action="MyTrades" method="get">
+            <button type="submit" class="btn btn-outline-primary">View Completed Trades</button>
+        </form>
+    </div>
 
-@if (Model.IncomingTrades.Any())
-{
-    foreach (var trade in Model.IncomingTrades)
+    @if (Model.IncomingTrades.Any(t => t.Status == StatusType.Pending))
     {
-        @if(trade.Status == StatusType.Pending)
-        {
-            <div>
-                <p><strong>From: @trade.RequesterEmail</strong></p>
-                <p>Offering: @trade.RequesterPokemonName</p>
-                <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" />
-                <p>Wants: @trade.ReceiverPokemonName</p>
-                <img src="@trade.ReceiverPokemonSprite" alt="@trade.ReceiverPokemonName" />
-                <p>Status: @trade.Status</p>
+            <div class="row">
+            @foreach (var trade in Model.IncomingTrades.Where(t => t.Status == StatusType.Pending))
+            {
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card shadow border-primary">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">From: @trade.RequesterEmail</h5>
+                                    <div class="mb-2">
+                                        <strong>Offering:</strong>
+                                        <p>@trade.RequesterPokemonName</p>
+                                        <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" class="img-fluid" />
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>Wants:</strong>
+                                        <p>@trade.ReceiverPokemonName</p>
+                                        <img src="@trade.ReceiverPokemonSprite" alt="@trade.ReceiverPokemonName" class="img-fluid" />
+                                    </div>
+                                    <p><strong>Status:</strong> @trade.Status</p>
 
-                @if (trade.Status == StatusType.Pending)
-                {
-                    <form asp-action="RespondToTrade" method="post">
-                        <input type="hidden" name="tradeId" value="@trade.TradeId" />
-                        <button type="submit" name="accept" value="true">Accept</button>
-                        <button type="submit" name="accept" value="false">Reject</button>
-                    </form>
-                }
+                                    <form asp-action="RespondToTrade" method="post" class="d-flex gap-2 mt-3">
+                                        <input type="hidden" name="tradeId" value="@trade.TradeId" />
+                                        <button type="submit" name="accept" value="true" class="btn btn-success">Accept</button>
+                                        <button type="submit" name="accept" value="false" class="btn btn-danger">Reject</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+            }
             </div>
-        }
     }
-}
-else
-{
-    <p>No incoming trades.</p>
-}
-
-
-<h2>Outgoing Trades</h2>
-
-<form asp-controller="Trade" asp-action="CreateTrade" method="get">
-    <button type="submit">Propose a Trade</button>
-</form>
-
-@if (Model.OutgoingTrades.Any())
-{
-    foreach (var trade in Model.OutgoingTrades)
+    else
     {
-        @if(trade.Status == StatusType.Pending)
-        {
-            <div>
-                <p><strong>To: @trade.ReceiverEmail</strong></p>
-                <p>Offering: @trade.RequesterPokemonName</p>
-                <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" />
-                <p>Wants: @trade.ReceiverPokemonName</p>
-                <img src="@trade.ReceiverPokemonSprite" alt="@trade.ReceiverPokemonName" />
-                <p>Status: @trade.Status</p>
-            </div>
-        }
+            <div class="alert alert-info">No incoming trades.</div>
     }
-}
-else
-{
-    <p>No outgoing trades.</p>
-}
+
+    <hr class="my-5" />
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Outgoing Trades</h2>
+        <form asp-controller="Trade" asp-action="CreateTrade" method="get">
+            <button type="submit" class="btn btn-primary">Propose a Trade</button>
+        </form>
+    </div>
+
+    @if (Model.OutgoingTrades.Any(t => t.Status == StatusType.Pending))
+    {
+            <div class="row">
+            @foreach (var trade in Model.OutgoingTrades.Where(t => t.Status == StatusType.Pending))
+            {
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card shadow-sm border-secondary">
+                                <div class="card-body">
+                                    <h5 class="card-title text-secondary">To: @trade.ReceiverEmail</h5>
+                                    <div class="mb-2">
+                                        <strong>Offering:</strong>
+                                        <p>@trade.RequesterPokemonName</p>
+                                        <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" class="img-fluid" />
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>Wants:</strong>
+                                        <p>@trade.ReceiverPokemonName</p>
+                                        <img src="@trade.ReceiverPokemonSprite" alt="@trade.ReceiverPokemonName" class="img-fluid" />
+                                    </div>
+                                    <p><strong>Status:</strong> @trade.Status</p>
+                                </div>
+                            </div>
+                        </div>
+            }
+            </div>
+    }
+    else
+    {
+            <div class="alert alert-info">No outgoing trades.</div>
+    }
+</div>
