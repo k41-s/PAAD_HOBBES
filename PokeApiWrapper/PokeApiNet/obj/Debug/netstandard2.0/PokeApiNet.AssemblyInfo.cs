@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute(".Net client for the PokeAPI api")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e379edffb08874c9eae3b0acef7eee5ef57bde4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+158e6ee508f85d59cc3000c9bd96b119b242d4d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("PokeApiNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PokeApiNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
