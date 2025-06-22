@@ -10627,25 +10627,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nino\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\kaish\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\PokemonGenerator.csproj",
+      "projectUniqueName": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\PokemonGenerator.csproj",
       "projectName": "PokemonGenerator",
-      "projectPath": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\PokemonGenerator.csproj",
-      "packagesPath": "C:\\Users\\Nino\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\obj\\",
+      "projectPath": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\PokemonGenerator.csproj",
+      "packagesPath": "C:\\Users\\kaish\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\Generator-Inventory\\PokemonGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kaish\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10660,8 +10658,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\PokeApiWrapper\\PokeApiNet\\PokeApiNet.csproj": {
-              "projectPath": "C:\\Users\\Nino\\Documents\\GitHub\\PAAD_HOBBES\\PokeApiWrapper\\PokeApiNet\\PokeApiNet.csproj"
+            "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\PokeApiWrapper\\PokeApiNet\\PokeApiNet.csproj": {
+              "projectPath": "C:\\Users\\kaish\\Algebra\\Semester 4\\Project Approach to Applications Development\\Project\\PAAD_HOBBES\\PokeApiWrapper\\PokeApiNet\\PokeApiNet.csproj"
             }
           }
         }
@@ -10676,7 +10674,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -10714,7 +10712,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
