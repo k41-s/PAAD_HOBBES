@@ -16,7 +16,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute(".Net client for the PokeAPI api")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+109813cb723e48ca7515ee3082682422eb24f3fb")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb410f3dcd08cf6f4d7f3b243abf5f4535a47797")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("PokeApiNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PokeApiNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
