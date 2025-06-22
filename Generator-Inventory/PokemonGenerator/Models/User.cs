@@ -15,6 +15,9 @@ namespace PokemonGenerator.Models
 
         [BsonElement("PasswordHash")]
         public string PasswordHash { get; set; }
+
+        [BsonElement("LastPokemonSelectedTime")]
+        public DateTime? LastPokemonSelectedTime { get; set; }
     }
 
     public static class PasswordHelper

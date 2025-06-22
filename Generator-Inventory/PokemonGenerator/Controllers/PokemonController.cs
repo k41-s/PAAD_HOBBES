@@ -91,6 +91,22 @@ namespace PokemonGenerator.Controllers
             if (CurrentUserId == null)
                 return Unauthorized();
 
+            var user = _userService.GetUserById(CurrentUserId);
+            if (user == null)
+                return NotFound();
+
+            // Cooldown check
+            if (user.LastPokemonSelectedTime.HasValue &&
+                DateTime.UtcNow < user.LastPokemonSelectedTime.Value.AddHours(24))
+            {
+                TimeSpan remaining = user.LastPokemonSelectedTime.Value.AddHours(24) - DateTime.UtcNow;
+                return BadRequest(new
+                {
+                    error = true,
+                    message = $"You must wait {remaining.Hours}h {remaining.Minutes}m before selecting again."
+                });
+            }
+
             var pokemons = await _pokemonService.GetRandomPokemonAsync();
 
             var stored = pokemons.Select(p => new OwnedPokemon
@@ -101,9 +117,6 @@ namespace PokemonGenerator.Controllers
             }).ToList();
 
             return Json(stored);
-
-            // Do not save pokemon, just load 6 to choose from
-
         }
 
         [HttpPost]
@@ -111,6 +124,10 @@ namespace PokemonGenerator.Controllers
         {
             if (CurrentUserId == null)
                 return Unauthorized();
+
+            var user = _userService.GetUserById(CurrentUserId);
+            if (user == null)
+                return NotFound();
 
             Pokemon p = await _pokemonService.GetPokemonByIdAsync(id);
 
@@ -122,6 +139,10 @@ namespace PokemonGenerator.Controllers
             };
 
             await _storedPokemonService.SavePokemonAsync(pokemon, CurrentUserId);
+
+            // Update selection timestamp
+            user.LastPokemonSelectedTime = DateTime.UtcNow;
+            _userService.UpdateUser(user);
 
             return RedirectToAction(nameof(ViewStored));
         }
