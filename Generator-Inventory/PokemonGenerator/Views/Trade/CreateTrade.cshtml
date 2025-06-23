@@ -5,17 +5,15 @@
 
 <h2>@ViewData["Title"]</h2>
 
-<!-- Form to select user and reload page -->
+<!-- Form to select user to trade with -->
 <form asp-action="CreateTrade" method="get">
-    <section>
+    <section class="mb-4">
         <label>Select user to trade with:</label>
         <select name="receiverUserId" required class="form-select d-inline w-auto me-2">
             @foreach (var user in Model.OtherUsers)
             {
                 string? selectedAttr = user.Id == Model.SelectedReceiverUserId ? "selected" : "";
-                <option value="@user.Id" selected="@selectedAttr">
-                    @user.Username
-                </option>
+                    <option value="@user.Id" selected="@selectedAttr">@user.Username</option>
             }
         </select>
         <button type="submit" class="btn btn-primary">Select</button>
@@ -33,24 +31,53 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+
+                    <!-- Your Pokémon -->
                     <div class="mb-3">
                         <label class="form-label">Your Pokémon:</label>
-                        <select name="offeredPokemonId" class="form-select" required>
-                            @foreach (var pokemon in Model.MyPokemon)
-                            {
-                                <option value="@pokemon.Id">@pokemon.Name</option>
-                            }
-                        </select>
+                        <div class="dropdown w-100">
+                            <button class="btn btn-outline-secondary dropdown-toggle w-100 d-flex align-items-center justify-content-between" type="button" id="yourPokemonDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span id="selectedYourPokemonText">Select a Pokémon</span>
+                                <img id="selectedYourPokemonImg" src="" alt="" style="height: 30px; display: none;" />
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="yourPokemonDropdown">
+                                @foreach (var pokemon in Model.MyPokemon)
+                                {
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center" href="#" data-id="@pokemon.Id" data-name="@pokemon.Name" data-img="@pokemon.SpriteUrl">
+                                                <img src="@pokemon.SpriteUrl" alt="@pokemon.Name" style="height: 30px; margin-right: 10px;" />
+                                            @pokemon.Name
+                                            </a>
+                                        </li>
+                                }
+                            </ul>
+                            <input type="hidden" name="offeredPokemonId" id="offeredPokemonInput" required />
+                        </div>
                     </div>
+
+                    <!-- Their Pokémon -->
                     <div class="mb-3">
                         <label class="form-label">Their Pokémon:</label>
-                        <select name="wantedPokemonId" class="form-select" required>
-                            @foreach (var pokemon in Model.ReceiverPokemon)
-                            {
-                                <option value="@pokemon.Id">@pokemon.Name</option>
-                            }
-                        </select>
+                        <div class="dropdown w-100">
+                            <button class="btn btn-outline-secondary dropdown-toggle w-100 d-flex align-items-center justify-content-between" type="button" id="theirPokemonDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span id="selectedTheirPokemonText">Select a Pokémon</span>
+                                <img id="selectedTheirPokemonImg" src="" alt="" style="height: 30px; display: none;" />
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="theirPokemonDropdown">
+                                @foreach (var pokemon in Model.ReceiverPokemon)
+                                {
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center" href="#" data-id="@pokemon.Id" data-name="@pokemon.Name" data-img="@pokemon.SpriteUrl">
+                                                <img src="@pokemon.SpriteUrl" alt="@pokemon.Name" style="height: 30px; margin-right: 10px;" />
+                                            @pokemon.Name
+                                            </a>
+                                        </li>
+                                }
+                            </ul>
+                            <input type="hidden" name="wantedPokemonId" id="wantedPokemonInput" required />
+                        </div>
                     </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -64,10 +91,35 @@
 <!-- Show modal if needed -->
 @if (Model.ShowModal)
 {
-    <script>
-        window.onload = () => {
-            const tradeModal = new bootstrap.Modal(document.getElementById('tradeModal'));
-            tradeModal.show();
-        };
-    </script>
+        <script>
+            window.onload = () => {
+                const tradeModal = new bootstrap.Modal(document.getElementById('tradeModal'));
+                tradeModal.show();
+            };
+        </script>
 }
+
+<!-- Sprite Dropdown Handling -->
+<script>
+    document.querySelectorAll('#yourPokemonDropdown + .dropdown-menu a').forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('offeredPokemonInput').value = this.dataset.id;
+            document.getElementById('selectedYourPokemonText').textContent = this.dataset.name;
+            const img = document.getElementById('selectedYourPokemonImg');
+            img.src = this.dataset.img;
+            img.style.display = 'inline';
+        });
+    });
+
+    document.querySelectorAll('#theirPokemonDropdown + .dropdown-menu a').forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('wantedPokemonInput').value = this.dataset.id;
+            document.getElementById('selectedTheirPokemonText').textContent = this.dataset.name;
+            const img = document.getElementById('selectedTheirPokemonImg');
+            img.src = this.dataset.img;
+            img.style.display = 'inline';
+        });
+    });
+</script>

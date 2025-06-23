@@ -51,11 +51,12 @@
 
       <div class="modal-body">
         <div id="starterContainer" class="d-flex flex-wrap justify-content-center">
-          <!-- Cards go here -->
+          <!-- Cards will be injected here -->
         </div>
       </div>
 
       <div class="modal-footer">
+        <!-- No viewStoredInModal button here, so we'll guard in JS -->
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Close
         </button>
@@ -73,6 +74,7 @@
       </script>
 
       <script>
+        // Main-page buttons
         document.getElementById('view-stored-btn').addEventListener('click', () => {
           window.location.href = '/Pokemon/ViewStored';
         });
@@ -80,11 +82,13 @@
         document.getElementById('get-starter-btn').addEventListener('click', async (e) => {
           e.preventDefault();
 
+          // reset error alert
           const errorAlert = document.getElementById('error-alert');
           errorAlert.style.display = 'none';
           errorAlert.textContent = '';
 
           try {
+            // fetch random starters
             const resp = await fetch('/Pokemon/GetRandomPokemonsJson', {
               method: 'GET',
               headers: { 'Accept': 'application/json' }
@@ -92,14 +96,14 @@
 
             if (!resp.ok) {
               const errData = await resp.json().catch(() => null);
-              const msg = errData?.message || 'Network error';
-              throw new Error(msg);
+              throw new Error(errData?.message || 'Network error');
             }
 
             const pokemons = await resp.json();
             const container = document.getElementById('starterContainer');
             container.innerHTML = '';
 
+            // build cards
             pokemons.forEach(p => {
               const card = document.createElement('div');
               card.className = 'card m-2 text-center selectable-card';
@@ -115,17 +119,15 @@
                   const response = await fetch(`/Pokemon/StoreSelectedPokemon?id=${p.pokemonId}`, {
                     method: 'POST'
                   });
-
                   if (!response.ok) throw new Error('Failed to store Pokémon');
 
+                  // hide modal and redirect
                   const modalEl = document.getElementById('starterModal');
                   const modalInstance = bootstrap.Modal.getInstance(modalEl);
                   modalInstance.hide();
-
                   window.location.href = '/Pokemon/ViewStored';
 
-                } catch (err) {
-                  console.error(err);
+                } catch {
                   alert('Could not select this Pokémon.');
                 }
               });
@@ -133,12 +135,17 @@
               container.appendChild(card);
             });
 
+            // show modal
             const modal = new bootstrap.Modal(document.getElementById('starterModal'));
             modal.show();
 
-            document.getElementById('viewStoredInModal').onclick = () => {
-              window.location.href = '/Pokemon/ViewStored';
-            };
+            // *** OPTION 2: guard against missing element ***
+            const viewBtn = document.getElementById('viewStoredInModal');
+            if (viewBtn) {
+              viewBtn.addEventListener('click', () => {
+                window.location.href = '/Pokemon/ViewStored';
+              });
+            }
 
           } catch (err) {
             console.error(err);

@@ -39,6 +39,7 @@
       text-decoration: none;
       border-radius: 6px;
       transition: background-color 0.3s;
+      line-height: 1;    /* normalize text centering */
     }
 
     .poke-nav-btn:hover {
@@ -46,14 +47,16 @@
       color: white;
     }
 
+    /* === unified login/register padding & fixed height === */
     .poke-login-btn {
       background-color: #007bff;
       color: black;
       font-weight: bold;
-      padding: 6px 14px;
+      padding: 8px 14px;  /* same vertical padding as .poke-nav-btn */
       border-radius: 6px;
       text-decoration: none;
       transition: background-color 0.3s;
+      line-height: 1;     /* normalize centering */
     }
 
     .poke-login-btn:hover {
@@ -66,6 +69,19 @@
       background-color: #ccc !important;
       color: #666 !important;
       font-weight: normal;
+    }
+
+    /* === new: a little badge for “Logged in as …” === */
+    .poke-user-badge {
+      display: inline-block;
+      background-color: #007bff;
+      color: black;
+      font-weight: bold;
+      padding: 7px 14px;   /* match button height exactly */
+      border-radius: 6px;
+      margin-right: 8px;
+      line-height: 1;
+      text-decoration: none;
     }
 
     footer {
@@ -91,26 +107,28 @@
 
                 @if (User.Identity?.IsAuthenticated ?? false)
                 {
-                <a class="poke-nav-btn" asp-area="" asp-controller="Trade" asp-action="Index">Trading</a>
-                <a class="poke-nav-btn" asp-area="" asp-controller="Pokemon" asp-action="ViewStored">Inventory</a>
+              <a class="poke-nav-btn" asp-area="" asp-controller="Trade" asp-action="Index">Trading</a>
+              <a class="poke-nav-btn" asp-area="" asp-controller="Pokemon" asp-action="ViewStored">Inventory</a>
                 }
                 else
                 {
-                <span class="poke-nav-btn disabled-link">Trading</span>
-                <span class="poke-nav-btn disabled-link">Inventory</span>
+              <span class="poke-nav-btn disabled-link">Trading</span>
+              <span class="poke-nav-btn disabled-link">Inventory</span>
                 }
       </div>  
 
       <div class="poke-navbar-right">  
                 @if (!User.Identity.IsAuthenticated)
                 {  
-                <a class="poke-login-btn me-2" asp-area="" asp-controller="Account" asp-action="Login">Login</a>  
-                <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Register">Register</a>  
+              <a class="poke-login-btn me-2" asp-area="" asp-controller="Account" asp-action="Login">Login</a>  
+              <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Register">Register</a>  
                 }
                 else
                 {  
-                <span class="nav-link text-dark me-2" style="padding: 1vh;">Logged in as <strong>@User.Identity.Name</strong></span>  
-                <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>  
+              <span class="poke-user-badge">
+                <strong>@User.Identity.Name</strong>
+              </span>
+              <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>  
                 }  
       </div>  
     </nav>  
@@ -124,7 +142,8 @@
 
   <footer class="border-top text-muted mt-auto">
     <div class="container">
-      &copy; 2025 - PokemonGenerator - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+      &copy; 2025 - PokemonGenerator -
+      <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
     </div>
   </footer>
 

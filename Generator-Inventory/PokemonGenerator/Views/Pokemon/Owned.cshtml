@@ -4,112 +4,235 @@
     ViewData["Title"] = "Your Stored Pokémon";
 }
 
-<h2>Your Stored Pokémon</h2>
+<style>
+  /* Container & Grid */
+  .pokemon-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
 
-<div style="display: flex; flex-wrap: wrap;">
+  /* Card */
+  .pokemon-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    cursor: grab;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .pokemon-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  }
+  .pokemon-card.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+  }
+
+  /* Favorite star */
+  .favorite-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: gold;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.15s;
+  }
+  .favorite-toggle:hover {
+    transform: scale(1.2);
+  }
+
+  /* Delete buttons */
+  .delete-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .delete-btn:hover {
+    background: #c0392b;
+  }
+
+  #delete-all-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  #delete-all-btn:hover {
+    background: #c0392b;
+  }
+</style>
+
+<h2>Your Stored Pokémon</h2>
+<button id="delete-all-btn" class="btn btn-danger mb-3">Delete All Pokémon</button>
+
+<div class="pokemon-container">
     @foreach (var pokemon in Model)
     {
-        <div class="pokemon-card" data-id="@pokemon.Id" style="margin: 10px; text-align: center; border: 1px solid #ccc; padding: 10px; border-radius: 10px; position: relative;">
-            <!-- ⭐ Favorite Toggle Button <div style="margin: 10px; text-align: center; border: 1px solid #ccc; padding: 10px; border-radius: 10px;"> -->
-            <span class="favorite-toggle" data-id="@pokemon.Id" style="position: absolute; top: 5px; right: 5px; font-size: 22px; color: gold; cursor: pointer;">
+        <div class="pokemon-card" data-id="@pokemon.Id" draggable="true">
+          <span class="favorite-toggle" data-id="@pokemon.Id">
                 @(pokemon.IsFavorite ? "★" : "☆")
-            </span>
-
-
-
-            <h3>@pokemon.Name</h3>
-            <img src="@pokemon.SpriteUrl" alt="@pokemon.Name" width="100" height="100" />
-            <button class="delete-btn" data-id="@pokemon.Id" style="margin-top: 5px; background-color: #ff4d4d; color: white; border: none; padding: 5px 10px; border-radius: 5px;">
-                Delete
-            </button>
-
+          </span>
+          <h3>@pokemon.Name</h3>
+          <img src="@pokemon.SpriteUrl" alt="@pokemon.Name" width="100" height="100" />
+          <button class="delete-btn" data-id="@pokemon.Id">Delete</button>
         </div>
     }
 </div>
 
-@*Delete all stored Pokemon button*@
-<button id="delete-all-btn" style="margin-top: 20px; background-color: #ff3333; color: white; border: none; padding: 10px 15px; border-radius: 5px;">
-    Delete All Pokémon
-</button>
+<!-- Confirmation Modal -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Are you sure?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p id="confirmDeleteMessage">This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <button id="confirmCancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancel
+        </button>
+        <button id="confirmOk" type="button" class="btn btn-danger">
+          Yes, Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-
-
-
-@*----------------------- JAVASCRIPT -----------------------*@
 @section Scripts {
     <script>
-        // Toggle Favorite
-        document.querySelectorAll('.favorite-toggle').forEach(star => {
-            star.addEventListener('click', async function () {
-                const pokemonId = this.getAttribute('data-id');
-                const starElement = this;
+      // State for pending delete action
+      let pendingAction = null; // { type: 'single'|'all', id?: string }
 
-                try {
-                    const response = await fetch(`/Pokemon/ToggleFavorite?id=${pokemonId}`, {
-                        method: 'POST'
-                    });
+      const container = document.querySelector('.pokemon-container');
+      const deleteAllBtn = document.getElementById('delete-all-btn');
+      const modalEl = document.getElementById('confirmDeleteModal');
+      const confirmModal = new bootstrap.Modal(modalEl);
+      const confirmOkBtn = document.getElementById('confirmOk');
+      const confirmMessage = document.getElementById('confirmDeleteMessage');
 
-                    if (response.ok) {
-                        const isFavorite = starElement.textContent.trim() === "★";
-                        starElement.textContent = isFavorite ? "☆" : "★";
+      // Ask for confirmation
+      function askConfirm(action) {
+        pendingAction = action;
+        if (action.type === 'all') {
+          confirmMessage.textContent = 'Delete ALL your Pokémon? This cannot be undone.';
+          confirmOkBtn.textContent = 'Yes, Delete All';
+        } else {
+          confirmMessage.textContent = 'Delete this Pokémon?';
+          confirmOkBtn.textContent = 'Yes, Delete';
+        }
+        confirmModal.show();
+      }
 
-                        const card = starElement.closest('.pokemon-card');
-                        const container = card.parentElement;
+      // Wire up Delete All button
+      deleteAllBtn.addEventListener('click', () => {
+        askConfirm({ type: 'all' });
+      });
 
-                        card.remove();
-                        if (!isFavorite) {
-                            container.insertBefore(card, container.firstChild);
-                        } else {
-                            container.appendChild(card);
-                        }
-                    }
-                } catch (error) {
-                    console.error('Favorite error:', error);
-                }
-            });
+      // Wire up single Delete buttons via delegation
+      container.addEventListener('click', e => {
+        if (!e.target.classList.contains('delete-btn')) return;
+        const id = e.target.getAttribute('data-id');
+        askConfirm({ type: 'single', id });
+      });
+
+      // Confirm deletion
+      confirmOkBtn.addEventListener('click', async () => {
+        confirmModal.hide();
+        if (!pendingAction) return;
+
+        try {
+          let response;
+          if (pendingAction.type === 'all') {
+            response = await fetch('/Pokemon/DeleteAll', { method: 'POST' });
+          } else {
+            response = await fetch(`/Pokemon/Delete?id=${pendingAction.id}`, { method: 'POST' });
+          }
+
+          if (!response.ok) throw new Error('Delete failed');
+
+          if (pendingAction.type === 'all') {
+            container.innerHTML = '';
+          } else {
+            const card = container.querySelector(`.pokemon-card[data-id="${pendingAction.id}"]`);
+            if (card) card.remove();
+          }
+        } catch (err) {
+          console.error(err);
+          alert('Oops, something went wrong.');
+        }
+
+        pendingAction = null;
+      });
+
+      // DRAG & DROP REORDER
+      let draggedCard = null;
+      container.querySelectorAll('.pokemon-card').forEach(card => {
+        card.addEventListener('dragstart', () => {
+          draggedCard = card;
+          card.classList.add('dragging');
         });
-
-        // Delete One
-        document.querySelectorAll('.delete-btn').forEach(btn => {
-            btn.addEventListener('click', async function () {
-                const id = this.getAttribute('data-id');
-                const card = this.closest('.pokemon-card');
-
-                try {
-                    const response = await fetch(`/Pokemon/Delete?id=${id}`, {
-                        method: 'POST'
-                    });
-
-                    if (response.ok) {
-                        card.remove(); // Remove from DOM
-                    } else {
-                        console.error('Failed to delete');
-                    }
-                } catch (error) {
-                    console.error('Delete error:', error);
-                }
-            });
+        card.addEventListener('dragend', () => {
+          card.classList.remove('dragging');
+          draggedCard = null;
         });
+        card.addEventListener('dragover', e => e.preventDefault());
+        card.addEventListener('drop', e => {
+          e.preventDefault();
+          if (!draggedCard || draggedCard === card) return;
 
-        // Delete All
-        document.getElementById('delete-all-btn')?.addEventListener('click', async function () {
-            try {
-                const response = await fetch(`/Pokemon/DeleteAll`, {
-                    method: 'POST'
-                });
+          const cards = Array.from(container.children);
+          const fromIndex = cards.indexOf(draggedCard);
+          const toIndex   = cards.indexOf(card);
 
-                if (response.ok) {
-                    document.querySelectorAll('.pokemon-card').forEach(card => card.remove());
-                } else {
-                    console.error('Failed to delete all');
-                }
-            } catch (error) {
-                console.error('Delete all error:', error);
-            }
+          if (fromIndex < toIndex) {
+            container.insertBefore(draggedCard, card.nextSibling);
+          } else {
+            container.insertBefore(draggedCard, card);
+          }
+          // TODO: persist new order via AJAX
         });
+      });
+
+      // TOGGLE FAVORITE
+      container.addEventListener('click', async e => {
+        if (!e.target.classList.contains('favorite-toggle')) return;
+        const star = e.target;
+        const id   = star.getAttribute('data-id');
+
+        try {
+          const res = await fetch(`/Pokemon/ToggleFavorite?id=${id}`, { method: 'POST' });
+          if (!res.ok) throw new Error();
+
+          const nowFav = star.textContent.trim() !== '★';
+          star.textContent = nowFav ? '★' : '☆';
+
+          const card = star.closest('.pokemon-card');
+          container.removeChild(card);
+
+          if (nowFav) container.prepend(card);
+          else        container.appendChild(card);
+        } catch (err) {
+          console.error(err);
+        }
+      });
     </script>
 }
-
-
-

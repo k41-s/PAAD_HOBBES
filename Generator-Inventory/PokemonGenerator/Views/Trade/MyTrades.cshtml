@@ -1,52 +1,115 @@
 ﻿@model PokemonGenerator.Models.MyTradesViewModel
 
-<h1>Your sent trades</h1>
-<h2>-------------------------------</h2>
+@{
+    ViewData["Title"] = "Your Sent Trades";
+}
 
-<h2 style="padding: 2px;">Accepted Trades</h2>
-<h3>--------------------------</h3>
+<!-- custom styles; you can move these into your main stylesheet -->
+<style>
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e2e2e2;
+    padding-bottom: 0.25rem;
+  }
+  .pokemon-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  .trade-card {
+    transition: transform .2s, box-shadow .2s;
+  }
+  .trade-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+</style>
 
-@if (Model.AcceptedTrades.Any())
-{
-    foreach (var trade in Model.AcceptedTrades)
+<h1 class="text-center my-4">Your Sent Trades</h1>
+
+<!-- ACCEPTED TRADES -->
+<section class="mb-5">
+  <h2 class="section-title text-success">Accepted Trades</h2>
+
+    @if (Model.AcceptedTrades.Any())
     {
-        <div>
-            <p><strong>From: @trade.RequesterEmail</strong></p>
-            <p>Offered: @trade.RequesterPokemonName</p>
-            <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" />
-            <p>Requested: @trade.ReceiverPokemonName</p>
-            <img src="@trade.ReceiverPokemonSprite" alt="@trade.ReceiverPokemonName" />
-            <p>Status: @trade.Status</p>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            @foreach (var trade in Model.AcceptedTrades)
+            {
+                <div class="col">
+                  <div class="card border-success h-100 trade-card">
+                    <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                      <span><strong>From:</strong> @trade.RequesterEmail</span>
+                      <span class="badge bg-light text-success">@trade.Status</span>
+                    </div>
+                    <div class="card-body d-flex justify-content-around align-items-center">
+                      <div class="text-center">
+                        <p class="mb-1 fw-semibold">Offered</p>
+                        <img src="@trade.RequesterPokemonSprite"
+                             alt="@trade.RequesterPokemonName"
+                             class="pokemon-img mb-2" />
+                        <div>@trade.RequesterPokemonName</div>
+                      </div>
+                      <div class="fs-2 text-secondary">→</div>
+                      <div class="text-center">
+                        <p class="mb-1 fw-semibold">Requested</p>
+                        <img src="@trade.ReceiverPokemonSprite"
+                             alt="@trade.ReceiverPokemonName"
+                             class="pokemon-img mb-2" />
+                        <div>@trade.ReceiverPokemonName</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            }
         </div>
-        <h3>--------------------------</h3>
     }
-}
-else
-{
-    <p>No accepted trades.</p>
-}
-
-<h2>-------------------------------</h2>
-<h2 style="padding: 2px;">Rejected Trades</h2>
-<h3>--------------------------</h3>
-
-@if (Model.RejectedTrades.Any())
-{
-    foreach (var trade in Model.RejectedTrades)
+    else
     {
-        <div>
-            <p><strong>From: @trade.RequesterEmail</strong></p>
-            <p>Offered: @trade.RequesterPokemonName</p>
-            <img src="@trade.RequesterPokemonSprite" alt="@trade.RequesterPokemonName" />
-            <p>Requested: @trade.ReceiverPokemonName</p>
-            <img src="@trade.ReceiverPokemonSprite" alt="@trade.ReceiverPokemonName" />
-            <p>Status: @trade.Status</p>
-        </div>
-        <h3>--------------------------</h3>
+        <p class="text-muted fst-italic">You have no accepted trades yet.</p>
     }
-}
-else
-{
-    <p>No rejected trades.</p>
-}
-<h2>-------------------------------</h2>
+</section>
+
+<!-- REJECTED TRADES -->
+<section class="mb-5">
+  <h2 class="section-title text-danger">Rejected Trades</h2>
+
+    @if (Model.RejectedTrades.Any())
+    {
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            @foreach (var trade in Model.RejectedTrades)
+            {
+                <div class="col">
+                  <div class="card border-danger h-100 trade-card">
+                    <div class="card-header bg-danger text-white d-flex justify-content-between align-items-center">
+                      <span><strong>From:</strong> @trade.RequesterEmail</span>
+                      <span class="badge bg-light text-danger">@trade.Status</span>
+                    </div>
+                    <div class="card-body d-flex justify-content-around align-items-center">
+                      <div class="text-center">
+                        <p class="mb-1 fw-semibold">Offered</p>
+                        <img src="@trade.RequesterPokemonSprite"
+                             alt="@trade.RequesterPokemonName"
+                             class="pokemon-img mb-2" />
+                        <div>@trade.RequesterPokemonName</div>
+                      </div>
+                      <div class="fs-2 text-secondary">→</div>
+                      <div class="text-center">
+                        <p class="mb-1 fw-semibold">Requested</p>
+                        <img src="@trade.ReceiverPokemonSprite"
+                             alt="@trade.ReceiverPokemonName"
+                             class="pokemon-img mb-2" />
+                        <div>@trade.ReceiverPokemonName</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="text-muted fst-italic">You have no rejected trades.</p>
+    }
+</section>
