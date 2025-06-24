@@ -107,28 +107,28 @@
 
                 @if (User.Identity?.IsAuthenticated ?? false)
                 {
-              <a class="poke-nav-btn" asp-area="" asp-controller="Trade" asp-action="Index">Trading</a>
-              <a class="poke-nav-btn" asp-area="" asp-controller="Pokemon" asp-action="ViewStored">Inventory</a>
+                  <a class="poke-nav-btn" asp-area="" asp-controller="Trade" asp-action="Index">Trading</a>
+                  <a class="poke-nav-btn" asp-area="" asp-controller="Pokemon" asp-action="ViewStored">Inventory</a>
                 }
                 else
                 {
-              <span class="poke-nav-btn disabled-link">Trading</span>
-              <span class="poke-nav-btn disabled-link">Inventory</span>
+                  <span class="poke-nav-btn disabled-link">Trading</span>
+                  <span class="poke-nav-btn disabled-link">Inventory</span>
                 }
       </div>  
 
       <div class="poke-navbar-right">  
                 @if (!User.Identity.IsAuthenticated)
                 {  
-              <a class="poke-login-btn me-2" asp-area="" asp-controller="Account" asp-action="Login">Login</a>  
-              <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Register">Register</a>  
+                  <a class="poke-login-btn me-2" asp-area="" asp-controller="Account" asp-action="Login">Login</a>  
+                  <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Register">Register</a>  
                 }
                 else
                 {  
-              <span class="poke-user-badge">
-                <strong>@User.Identity.Name</strong>
-              </span>
-              <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>  
+                  <span class="poke-user-badge">
+                    <strong>@User.Identity.Name</strong>
+                  </span>
+                  <a class="poke-login-btn" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>  
                 }  
       </div>  
     </nav>  
